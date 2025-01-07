@@ -82,7 +82,7 @@ const Navbar = () => {
               >
                 <Link
                   to={path}
-                  className="w-full h-full text-xl font-bold font-['inter'] flex justify-center items-center text-white"
+                  className="w-full h-full text-xl font-bold font-['poppins'] flex justify-center items-center text-white"
                 >
                   {name}
                 </Link>
