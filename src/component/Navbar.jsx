@@ -57,7 +57,7 @@ const Navbar = () => {
       >
         <ul className="w-full overflow-hidden">
           {NavbarList.map(({ icon, name, path }, index) => (
-            <li onClick={() => setIsopen(false)} key={index} className="w-full h-[80px] mt-5 relative after:absolute after:content-[''] after:bottom-0 after:h-[5px] after:bg-white after:w-0 hover:after:w-full after:left-0 after:transition-all after:duration-500">
+            <li onClick={() => setIsopen(false)} key={index} className="w-full h-[60px] mt-5 relative after:absolute after:content-[''] after:bottom-0 after:h-[5px] after:bg-white after:w-0 hover:after:w-full after:left-0 after:transition-all after:duration-500">
               <Link to={path} className="size-full flex flex-row gap-5 items-center">
                 <div className="w-[80px] h-full flex justify-center items-center text-white text-3xl">
                   <FontAwesomeIcon icon={icon} />
