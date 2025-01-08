@@ -3,6 +3,7 @@ import { featureTop, featureCard, featureMid } from "./../data/Home";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Component } from "react";
 
 const Home = () => {
   const settings = {
@@ -31,7 +32,7 @@ const Home = () => {
         ))}
       </div>
       <div className="w-full flex justify-center items-center">
-        <div className="slider-container w-[90%]">
+        <div className="slider-container w-[100%]">
           <Slider {...settings}>
             {featureMid.map(({ title, des, img }, index) => (
               <FeatureMid

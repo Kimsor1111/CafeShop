@@ -11,7 +11,7 @@ const cardFeature = ({ icon, title, des }) => {
   };
   return (
     <div
-      className={`xl:w-[90%] lg:flex-col lg:rounded-[40px] lg:justify-center items-center justify-around w-full h-full duration-150 flex flex-row cursor-pointer ${
+      className={`xl:w-[90%] lg:flex-col lg:rounded-[40px] lg:justify-center lg:px-0 px-10 items-center justify-between w-full h-full duration-150 flex flex-row cursor-pointer ${
         ishover ? "bg-[rgb(71,51,38)]" : "bg-[rgba(253,240,224,255)] "
       }`}
       onMouseOver={CardMouseover}
