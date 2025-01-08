@@ -1,13 +1,15 @@
-import {
-  faBook,
-  faList,
-  faPhone,
-  faTag,
-} from "@fortawesome/free-solid-svg-icons";
+import { faList, faPhone, faTag } from "@fortawesome/free-solid-svg-icons";
 import FeatureCafe from "./../../assets/images/featureTop1.png";
 import FeatureDesert from "./../../assets/images/featureTop2.png";
 import FeatureMid1 from "./../../assets/images/featureMid1.jpg";
 import FeatureMid2 from "./../../assets/images/featureMid2.jpg";
+import featurePrd1 from "./../../assets/images/featurePrd1.jpg";
+import featurePrd2 from "./../../assets/images/featurePrd2.jpg";
+import featurePrd3 from "./../../assets/images/featurePrd3.jpg";
+import featurePrd4 from "./../../assets/images/featurePrd4.jpg";
+import featurePrd5 from "./../../assets/images/featurePrd5.jpg";
+import featurePrd6 from "./../../assets/images/featurePrd6.jpg";
+import featureBottomImg from "./../../assets/images/featureBottom.jpg";
 export const featureTop = [
   {
     title:
@@ -51,3 +53,60 @@ export const featureMid = [
     img: FeatureMid2,
   },
 ];
+
+export const featurePrd = [
+  {
+    img: featurePrd1,
+    title: "Iced Cuppuchino",
+    type: "Drink - Cafe",
+    price: "4",
+    pricedot: ".59",
+    total: 4.59,
+  },
+  {
+    img: featurePrd2,
+    title: "Classic Iced Chocolate",
+    type: "Drink - Chocolate",
+    price: "4",
+    pricedot: ".99",
+    total: 4.99,
+  },
+  {
+    img: featurePrd3,
+    title: "Iced Latte",
+    type: "Drink - Cafe",
+    price: "4",
+    pricedot: ".29",
+    total: 4.29,
+  },
+  {
+    img: featurePrd4,
+    title: "Almond Croissant",
+    type: "Food - Bakery",
+    price: "2",
+    pricedot: ".49",
+    total: 2.49,
+  },
+  {
+    img: featurePrd5,
+    title: "Cheese & Tomato Toastie",
+    type: "Food - Lunch",
+    price: "1",
+    pricedot: ".99",
+    total: 1.99,
+  },
+  {
+    img: featurePrd6,
+    title: "Chocolate Chip Cookie",
+    type: "Food - Sweet Treats",
+    price: "2",
+    pricedot: ".55",
+    total: 2.55,
+  },
+];
+
+export const featureBottom = {
+  title: "Caffeine & Cartoons: Anime Café Vibes",
+  des: "Depict a stunning, dreamlike landscape where the real world seamlessly blends into anime aesthetics. Streets would have an anime-inspired design with exaggerated proportions.",
+  img: featureBottomImg,
+};

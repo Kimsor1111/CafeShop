@@ -1,5 +1,17 @@
-import { FeatureTop, FeatureCard, FeatureMid } from "./../component/Home/index";
-import { featureTop, featureCard, featureMid } from "./../data/Home";
+import {
+  FeatureTop,
+  FeatureCard,
+  FeatureMid,
+  FeaturePrd,
+  FeatureBottom,
+} from "./../component/Home/index";
+import {
+  featureTop,
+  featureCard,
+  featureMid,
+  featurePrd,
+  featureBottom,
+} from "./../data/Home";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -46,6 +58,31 @@ const Home = () => {
           </Slider>
         </div>
       </div>
+      <h1 className="lg:text-5xl w-full h-[300px] bg-[rgba(233,216,199,255)] flex justify-center text-center items-center flex-col text-4xl font-['poppins'] font-bold text-[rgb(71,51,38)] px-10">
+        <span className="text-sm font-semibold mb-2">Cafe & Dessert</span>
+        Tasty & Inclusive Treats
+        <span className="text-sm font-semibold mt-2">
+          We offer a range of delicious vegan and gluten-free cakes, so everyone
+          can enjoy a sweet treat at our cafe.
+        </span>
+      </h1>
+      <div className="lg:gap-10 lg:px-10 md:grid-cols-3 grid-cols-1 place-items-center pb-10 grid gap-5 px-5 bg-[rgba(233,216,199,255)]">
+        {featurePrd.map(({ img, title, type, price, pricedot }, index) => (
+          <FeaturePrd
+            key={index}
+            img={img}
+            title={title}
+            type={type}
+            price={price}
+            pricedot={pricedot}
+          />
+        ))}
+      </div>
+      <FeatureBottom
+        title={featureBottom.title}
+        des={featureBottom.des}
+        img={featureBottom.img}
+      />
     </>
   );
 };

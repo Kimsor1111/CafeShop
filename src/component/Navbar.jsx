@@ -74,7 +74,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="w-full h-[40px] mt-5 px-5 flex items-center flex-row gap-5 border-t pt-4">
+        <div className="w-full h-[40px] mt-5 px-5 flex items-center flex-row gap-5 pt-1">
           <button className="w-fit px-5 h-[35px] rounded-[20px] text-sm font-bold font-['inter'] bg-white hover:bg-gray-200">
             Create Account
           </button>
