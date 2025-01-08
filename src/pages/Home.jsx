@@ -30,18 +30,20 @@ const Home = () => {
           <FeatureCard key={index} icon={icon} title={title} des={des} />
         ))}
       </div>
-      <div className="slider-container">
-        <Slider {...settings}>
-          {featureMid.map(({ title, des, img }, index) => (
-            <FeatureMid
-              key={index}
-              title={title}
-              des={des}
-              img={img}
-              featureindex={index + 1}
-            />
-          ))}
-        </Slider>
+      <div className="w-full flex justify-center items-center">
+        <div className="slider-container w-[90%]">
+          <Slider {...settings}>
+            {featureMid.map(({ title, des, img }, index) => (
+              <FeatureMid
+                key={index}
+                title={title}
+                des={des}
+                img={img}
+                featureindex={index + 1}
+              />
+            ))}
+          </Slider>
+        </div>
       </div>
     </>
   );
