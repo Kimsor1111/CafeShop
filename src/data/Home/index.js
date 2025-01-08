@@ -1,6 +1,13 @@
-import { faBook, faList, faPhone, faTag } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faList,
+  faPhone,
+  faTag,
+} from "@fortawesome/free-solid-svg-icons";
 import FeatureCafe from "./../../assets/images/featureTop1.png";
 import FeatureDesert from "./../../assets/images/featureTop2.png";
+import FeatureMid1 from "./../../assets/images/featureMid1.jpg";
+import FeatureMid2 from "./../../assets/images/featureMid2.jpg";
 export const featureTop = [
   {
     title:
@@ -30,5 +37,17 @@ export const featureCard = [
     icon: faList,
     title: "Our Delicious Creations!",
     des: "Indulge in a wide variety of handcrafted beverages and treats made with love and the finest ingredients. From rich, aromatic coffees to refreshing drinks and mouthwatering desserts, we have something for every craving. Explore our menu and treat yourself today!",
+  },
+];
+export const featureMid = [
+  {
+    title: "Cozy Corner Café",
+    des: "Step into a warm, inviting atmosphere at Cozy Corner Café, where every visit feels like home. From freshly brewed coffee to delectable pastries and delicious sandwiches, our café offers a perfect escape for your daily dose of comfort. Whether you’re looking to relax with a cup of tea, meet friends, or work in a cozy setting, we’ve got you covered. Join us and experience a blend of good food, great company, and a relaxed ambiance.",
+    img: FeatureMid1,
+  },
+  {
+    title: "Cherry Chocolate Bliss Cake",
+    des: "Indulge in the perfect fusion of rich chocolate and sweet cherries with our Cherry Chocolate Bliss Cake! This delightful treat features layers of moist chocolate cake, filled with a tangy cherry compote and topped with a smooth chocolate ganache. Garnished with fresh cherries and a sprinkle of chocolate shavings, every bite is a heavenly balance of sweetness and richness.",
+    img: FeatureMid2,
   },
 ];

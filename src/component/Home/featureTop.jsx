@@ -14,8 +14,10 @@ const featureCafe = ({ title, des, img, featureindex }) => {
             <h1 className="lg:text-5xl md:text-3xl text-2xl text-black font-bold font-['poppins']">
               {title}
             </h1>
-            <p className="text-sm text-gray-800 font-['poppins'] my-5">{des}</p>
-            <button className="md:h-[40px] py-5 px-7 mb-5 flex justify-center items-center w-fit h-[30px] relative rounded-[20px] bg-[rgb(71,51,38)] hover:bg-[rgb(80,60,50)] text-white font-bold text-lg font-['poppins']">
+            <p className="xl:text-lg text-sm text-gray-800 font-['poppins'] my-5">
+              {des}
+            </p>
+            <button className=" md:h-[40px] py-5 px-7 mb-5 flex justify-center items-center w-fit h-[30px] relative rounded-[20px] bg-[rgb(71,51,38)] hover:bg-[rgb(80,60,50)] text-white font-bold text-lg font-['poppins']">
               Discover More
             </button>
           </div>
@@ -26,7 +28,9 @@ const featureCafe = ({ title, des, img, featureindex }) => {
             <h1 className="lg:text-5xl md:text-3xl text-2xl text-black font-bold font-['poppins']">
               {title}
             </h1>
-            <p className="text-sm text-gray-800 font-['poppins'] my-5">{des}</p>
+            <p className="xl:text-lg text-sm text-gray-800 font-['poppins'] my-5">
+              {des}
+            </p>
             <button className="md:h-[40px] py-5 px-7 mb-5 flex justify-center items-center w-fit h-[30px] relative rounded-[20px] bg-[rgb(71,51,38)] hover:bg-[rgb(80,60,50)] text-white font-bold text-lg font-['poppins']">
               Discover More
             </button>

@@ -7,6 +7,8 @@ import {
   faMugHot,
   faContactBook,
   faBowlFood,
+  faX,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -40,9 +42,6 @@ const Navbar = () => {
 
   const handleMenu = () => {
     setIsopen(!isopen);
-    isopen == false
-      ? (document.querySelector("body").style.overflow = "hidden")
-      : (document.querySelector("body").style.overflow = "auto");
   };
 
   return (
@@ -50,8 +49,8 @@ const Navbar = () => {
       <div
         className={
           isopen
-            ? "lg:hidden top-[70px] translate-x-0 transition-all duration-500 w-full h-screen bg-[#aa9078] right-0 fixed z-[100]"
-            : "lg:hidden top-[70px] translate-x-full transition-all duration-500 w-full h-screen bg-[#aa9078] right-0 fixed z-[100]"
+            ? "lg:hidden top-[70px] translate-x-0 transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[100]"
+            : "lg:hidden top-[70px] translate-x-full transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[100]"
         }
       >
         <ul className="w-full overflow-hidden">
@@ -75,8 +74,22 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className="w-full h-[40px] mt-5 px-5 flex items-center flex-row gap-5 border-t pt-4">
+          <button className="w-fit px-5 h-[35px] rounded-[20px] text-sm font-bold font-['inter'] bg-white hover:bg-gray-200">
+            Create Account
+          </button>
+          <button className="w-fit px-5 h-[35px] rounded-[20px] text-sm font-bold font-['inter'] text-white bg-[rgb(71,51,38)] hover:bg-[rgb(80,60,50,0.9)]">
+            Join Now
+          </button>
+        </div>
+        <div className="w-full mt-5">
+          <Link className="text-xl ml-5 text-white font-bold">
+            <FontAwesomeIcon icon={faLocationDot} className="mr-2 text-white" />
+            Find a store
+          </Link>
+        </div>
       </div>
-      <nav className="w-full h-[70px] bg-[#aa9078] sticky top-0 z-[101]">
+      <nav className="w-full h-[70px] bg-[rgb(170,144,120)] sticky top-0 z-[101]">
         <div className="lg:px-10 size-full px-2 flex flex-row justify-between">
           <h1 className='lg:text-4xl w-fit h-full text-2xl flex items-center font-bold font-["inter"] text-white'>
             BrandName
@@ -118,7 +131,7 @@ const Navbar = () => {
             </div>
             <div className="lg:hidden w-[35px] h-1/2 justify-center items-center flex">
               <FontAwesomeIcon
-                icon={faBars}
+                icon={isopen ? faX : faBars}
                 className="lg:text-2xl text-xl cursor-pointer text-white"
                 onClick={handleMenu}
               />
