@@ -1,2 +1,2 @@
 export { default as Home } from "./Home";
-export { default as Drink } from "./Drink";
+export { default as Menu } from "./Menu";

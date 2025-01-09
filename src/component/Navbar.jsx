@@ -4,7 +4,7 @@ import {
   faShoppingCart,
   faBars,
   faHome,
-  faMugHot,
+  faBook,
   faContactBook,
   faBowlFood,
   faX,
@@ -21,14 +21,14 @@ const NavbarList = [
     path: "/",
   },
   {
-    icon: faMugHot,
-    name: "Drink",
-    path: "/drink",
+    icon: faBook,
+    name: "Menu",
+    path: "/menu",
   },
   {
     icon: faBowlFood,
-    name: "Food",
-    path: "/food",
+    name: "About",
+    path: "/about",
   },
   {
     icon: faContactBook,
@@ -49,8 +49,8 @@ const Navbar = () => {
       <div
         className={
           isopen
-            ? "lg:hidden top-[70px] translate-x-0 transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[100]"
-            : "lg:hidden top-[70px] translate-x-full transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[100]"
+            ? "lg:hidden top-[70px] translate-x-0 transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[101]"
+            : "lg:hidden top-[70px] translate-x-full transition-all duration-500 w-full h-screen bg-[rgb(170,144,120)] right-0 fixed z-[101]"
         }
       >
         <ul className="w-full overflow-hidden">
