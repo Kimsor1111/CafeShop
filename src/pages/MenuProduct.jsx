@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MenuSide, ProductSlider } from "../component/Menu";
+import { Product } from "../data/Menu";
 import {
   faBook,
   faMagnifyingGlass,
@@ -10,12 +11,12 @@ const Menu = () => {
   const [openmenu, setOpenmenu] = useState(false);
   return (
     <>
-      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[#ffecd5] flex items-center font-['poppins'] font-semibold border-b border-black mb-2">
-        Menu {">"} Beverages
+      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
+        Menu {">"} Beverages & Foods
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
         <div
-          className={`lg:w-[310px] w-full bg-[#ffecd5] lg:relative lg:translate-x-0 absolute transition-all duration-200 ${
+          className={`lg:w-[310px] xl:w-[22%] w-full lg:relative lg:translate-x-0 bg-[rgba(233,216,199,255)] absolute transition-all duration-200 pt-2 z-[97] ${
             openmenu ? "" : "-translate-x-full"
           }`}
         >
@@ -33,10 +34,10 @@ const Menu = () => {
             <MenuSide />
           </div>
         </div>
-        <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll bg-red-500 px-1 ">
-          <div className="w-full h-[80px] bg-green-400 flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl text-2xl font-bold font-['inter']">
-              Beverages
+        <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll px-5 ">
+          <div className="w-full h-[70px] flex flex-row justify-between items-center">
+            <h1 className="md:text-4xl text-xl font-bold font-['inter']">
+              Beverages & Foods
             </h1>
             <div
               className={`lg:z-0 md:w-[270px] w-[220px] px-2 h-full flex justify-center items-center relative ${
@@ -45,7 +46,7 @@ const Menu = () => {
             >
               <input
                 type="text"
-                className="w-full h-1/2 rounded-[25px] pl-3 outline-none border-none placeholder:font-['poppins']"
+                className="md:block hidden w-full h-1/2 rounded-[25px] pl-3 outline-none border-none placeholder:font-['poppins']"
                 placeholder="Search"
               />
               <FontAwesomeIcon
@@ -59,8 +60,10 @@ const Menu = () => {
             className={`lg:hidden block mt-5 text-3xl cursor-pointer`}
             onClick={() => setOpenmenu(!openmenu)}
           />
-          <div>
-            <ProductSlider />
+          <div className="mb-20">
+            {Product.map(({title , product}, index) => (
+              <ProductSlider key={index} sliderindex={index + 1} title={title} product={product} />
+            ))}
           </div>
         </div>
       </div>

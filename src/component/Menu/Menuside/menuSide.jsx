@@ -1,4 +1,4 @@
-import { MenuDetail } from "../../../data/Drink";
+import { MenuDetail } from "../../../data/Menu";
 import Menu from "./submenu";
 
 const menuSide = () => {

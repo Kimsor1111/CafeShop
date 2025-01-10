@@ -10,11 +10,11 @@ const menu = ({ title, submenu, menuid }) => {
         className={`w-full relative flex flex-row items-center ${
           isopen ? "border-y" : "border-t"
         } ${
-          menuid % 2 == 0 ? "border-y" : ""
-        } border-black justify-center mt-2 `}
+          menuid % 2 == 0 ? "border-y" : "mt-2"
+        } border-black justify-center `}
       >
         <h1
-          className={`lg:w-[220px] lg:pl-1 w-full py-7 h-[40px] relative flex items-center pl-2 text-xl font-['poppins'] font-semibold `}
+          className={`lg:w-[220px] lg:pl-1 w-full py-6 h-[40px] relative flex items-center pl-2 text-xl font-['poppins'] font-semibold `}
         >
           {title}
         </h1>
