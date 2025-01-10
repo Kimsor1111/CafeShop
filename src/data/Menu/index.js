@@ -7,6 +7,7 @@ import CE6 from "./../../assets/Product/coffee_espresso6.jpg";
 import CE7 from "./../../assets/Product/coffee_espresso7.jpg";
 import CE8 from "./../../assets/Product/coffee_espresso8.jpg";
 import CE9 from "./../../assets/Product/coffee_espresso9.jpg";
+import CE10 from "./../../assets/Product/coffee_espresso10.jpg";
 import CB1 from "./../../assets/Product/cold_brew1.jpg";
 import CB2 from "./../../assets/Product/cold_brew2.jpg";
 import CB3 from "./../../assets/Product/cold_brew3.jpg";
@@ -16,6 +17,7 @@ import CB6 from "./../../assets/Product/cold_brew6.jpg";
 import CB7 from "./../../assets/Product/cold_brew7.jpg";
 import CB8 from "./../../assets/Product/cold_brew8.jpg";
 import CB9 from "./../../assets/Product/cold_brew9.png";
+import CB10 from "./../../assets/Product/cold_brew10.png";
 
 export const MenuDetail = [
   {
@@ -86,55 +88,65 @@ export const Product = [
         name: "White Chocolate Mocha",
         img: CE9,
       },
+      {
+        id: 10,
+        name: "Tiramuisu Latte",
+        img: CE10,
+      },
     ],
   },
   {
     title: "Cold Brew",
     product: [
       {
-        id: 1,
-        name: "Americano",
+        id: 11,
+        name: "Brown Sugar Cream Cold Brew",
         img: CB1,
       },
       {
-        id: 2,
-        name: "Brewed Coffee",
+        id: 12,
+        name: "Brown Sugar Cream Nitro Cold Brew",
         img: CB2,
       },
       {
-        id: 3,
-        name: "Coffee Latte",
+        id: 13,
+        name: "Cold Brew",
         img: CB3,
       },
       {
-        id: 4,
-        name: "Coffee Mocha",
+        id: 14,
+        name: "Cold Brew With Milk",
         img: CB4,
       },
       {
-        id: 5,
-        name: "Cappuccino",
+        id: 15,
+        name: "Cold Brew With Salted Caramel Cream",
         img: CB5,
       },
       {
-        id: 6,
-        name: "Caramel Macchiato",
+        id: 16,
+        name: "Cold Brew With Vanilla Sweet Cream",
         img: CB6,
       },
       {
-        id: 7,
-        name: "Espresso",
+        id: 17,
+        name: "Honey Ruby Grapefruit Cold Brew",
         img: CB7,
       },
       {
-        id: 8,
-        name: "Flat White",
+        id: 18,
+        name: "Nitro Cold Brew",
         img: CB8,
       },
       {
-        id: 9,
-        name: "White Chocolate Mocha",
+        id: 19,
+        name: "Salted Caramel Nitro Cold Brew",
         img: CB9,
+      },
+      {
+        id: 20,
+        name: "Nitro Cold Brew With Vanilla Sweet Cream",
+        img: CB10,
       },
     ],
   },
