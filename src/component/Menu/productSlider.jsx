@@ -1,7 +1,7 @@
 import React from "react";
-import img from "./../../assets/images/featurePrd1.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const productSlider = ({ title, product, sliderindex }) => {
   const scrollSliderLeft = () => {
     var slider = document.querySelector(`.slider${sliderindex}`);
@@ -12,11 +12,11 @@ const productSlider = ({ title, product, sliderindex }) => {
     slider.scrollLeft = slider.scrollLeft + 300;
   };
   return (
-    <div className="w-full mt-5 relative">
-      <div className="w-full h-[60px] flex flex-row gap-5 items-center">
-        <h1 className="text-md font-bold font-['poppins']">{title}</h1>
+    <div className="w-full mt-10 relative">
+      <div className="w-full h-[60px] flex flex-row gap-5 justify-between items-center">
+        <h1 className="text-[18px] font-bold font-['poppins']">{title}</h1>
         <div className="w-[90px] h-[20px]">
-          <button className="size-full flex justify-center items-center rounded-[10px] border border-black text-[10px] font-bold font-['poppins']">
+          <button className="size-full text-[14px] flex justify-center items-center rounded-[10px] border border-black  font-bold font-['inter'] hover:bg-[rgb(71,51,38)] hover:text-white duration-200">
             View All
           </button>
         </div>
@@ -35,15 +35,17 @@ const productSlider = ({ title, product, sliderindex }) => {
           className={` flex flex-row gap-3`}
           style={{ width: `${315 * product.length}px` }}
         >
-          {product.map(({ name, img }, index) => (
-            <div key={index} className="w-[300px]">
+          {product.map(({ id, name, img }, index) => (
+            <Link to={id.toString()} key={index} className="w-[300px]">
               <div className="w-full bg-[rgba(233,216,199,255)] mb-3">
-                <img src={img} alt="" className="w-full h-full object-contain"/>
+                <img
+                  src={img}
+                  alt=""
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="text-xl font-medium font-['poppins']">
-                {name}
-              </div>
-            </div>
+              <div className="text-xl font-medium font-['poppins']">{name}</div>
+            </Link>
           ))}
         </div>
       </div>

@@ -7,6 +7,7 @@ import {
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 const Menu = () => {
   const [openmenu, setOpenmenu] = useState(false);
   return (
@@ -16,7 +17,7 @@ const Menu = () => {
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
         <div
-          className={`lg:w-[310px] xl:w-[22%] w-full lg:relative lg:translate-x-0 bg-[rgba(233,216,199,255)] absolute transition-all duration-200 pt-2 z-[97] ${
+          className={`lg:w-[310px] xl:w-[22%] w-full lg:relative lg:translate-x-0 bg-[rgba(233,216,199,255)] absolute transition-all duration-500 pt-2 z-[97] ${
             openmenu ? "" : "-translate-x-full"
           }`}
         >
@@ -26,7 +27,7 @@ const Menu = () => {
               <span className="h-full">
                 <FontAwesomeIcon
                   icon={faX}
-                  className="absolute right-3 text-2xl top-[7px] cursor-pointer lg:hidden block"
+                  className="absolute right-3 text-2xl top-[15px] cursor-pointer lg:hidden block"
                   onClick={() => setOpenmenu(!openmenu)}
                 />
               </span>
@@ -36,11 +37,11 @@ const Menu = () => {
         </div>
         <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll px-5 ">
           <div className="w-full h-[70px] flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl text-xl font-bold font-['inter']">
+            <h1 className="md:text-4xl w-[70%] text-lg font-bold font-['inter']">
               Beverages & Foods
             </h1>
             <div
-              className={`lg:z-0 md:w-[270px] w-[220px] px-2 h-full flex justify-center items-center relative ${
+              className={`lg:z-0 md:w-[270px] w-[50px] px-2 h-full flex justify-center items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
             >
@@ -61,12 +62,18 @@ const Menu = () => {
             onClick={() => setOpenmenu(!openmenu)}
           />
           <div className="mb-20">
-            {Product.map(({title , product}, index) => (
-              <ProductSlider key={index} sliderindex={index + 1} title={title} product={product} />
+            {Product.map(({ title, product }, index) => (
+              <ProductSlider
+                key={index}
+                sliderindex={index + 1}
+                title={title}
+                product={product}
+              />
             ))}
           </div>
         </div>
       </div>
+      {/* <Outlet /> */}
     </>
   );
 };

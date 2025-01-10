@@ -14,7 +14,7 @@ const menu = ({ title, submenu, menuid }) => {
         } border-black justify-center `}
       >
         <h1
-          className={`lg:w-[220px] lg:pl-1 w-full py-6 h-[40px] relative flex items-center pl-2 text-xl font-['poppins'] font-semibold `}
+          className={`lg:pl-10 pl-2  w-full py-6 h-[40px] relative flex items-center text-xl font-['poppins'] font-semibold `}
         >
           {title}
         </h1>
@@ -29,14 +29,16 @@ const menu = ({ title, submenu, menuid }) => {
       <ul
         className={`w-full ${
           isopen ? "flex h-fit py-2" : "opacity-0 h-0 py-0"
-        } ease-in-out transition-all duration-[70ms] flex flex-col gap-2 items-center`}
+        } ease-in-out transition-all duration-[70ms] flex flex-col gap-2`}
       >
         {submenu.map((s, index) => (
           <li
             key={index}
-            className="lg:ml-0 lg:w-[210px] ml-2 w-full text-start font-['poppins'] text-md"
+            className="lg:pl-10 pl-2 w-full text-start font-['poppins'] text-md"
           >
-            <a href="" className="hover:underline hover:text-gray-800">{s}</a>
+            <a href="" className="hover:underline hover:text-gray-800">
+              {s}
+            </a>
           </li>
         ))}
       </ul>
