@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
-const menu = ({ title, submenu, menuid }) => {
+const menu = ({ id, title, submenu, menuid }) => {
   const [isopen, setIsopen] = useState(false);
   return (
     <>
@@ -13,11 +14,11 @@ const menu = ({ title, submenu, menuid }) => {
           menuid % 2 == 0 ? "border-y" : "mt-2"
         } border-black justify-center `}
       >
-        <h1
+        <Link
           className={`lg:pl-10 pl-2  w-full py-6 h-[40px] relative flex items-center text-xl font-['poppins'] font-semibold `}
         >
           {title}
-        </h1>
+        </Link>
         <FontAwesomeIcon
           onClick={() => setIsopen(!isopen)}
           icon={faCaretDown}

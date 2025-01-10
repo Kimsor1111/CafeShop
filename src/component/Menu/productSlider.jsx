@@ -32,19 +32,19 @@ const productSlider = ({ title, product, sliderindex }) => {
         className={`slider${sliderindex} relative w-full overflow-x-scroll scroll-smooth h-auto mt-5`}
       >
         <div
-          className={` flex flex-row gap-3`}
+          className={` flex flex-row gap-3 h-fit`}
           style={{ width: `${315 * product.length}px` }}
         >
           {product.map(({ id, name, img }, index) => (
             <Link to={id.toString()} key={index} className="w-[300px]">
-              <div className="w-full bg-[rgba(233,216,199,255)] mb-3">
+              <div className="w-full h-[300px] bg-[rgba(233,216,199,255)] mb-3">
                 <img
                   src={img}
                   alt=""
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="text-xl font-medium font-['poppins']">{name}</div>
+              <div className="text-lg font-normal font-['poppins']">{name}</div>
             </Link>
           ))}
         </div>
