@@ -10,8 +10,8 @@ const Menu = () => {
   const [openmenu, setOpenmenu] = useState(false);
   return (
     <>
-      <h1 className="w-full h-[40px] sticky top-[70px] z-[100] bg-[#ffecd5] flex items-center pl-2 font-['poppins'] font-semibold border-b border-black">
-        Menu {`>`} Drink
+      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[#ffecd5] flex items-center font-['poppins'] font-semibold border-b border-black">
+        Menu {">"} Beverages
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
         <div
@@ -20,12 +20,12 @@ const Menu = () => {
           }`}
         >
           <div className="w-full h-screen flex items-center flex-col py-5">
-            <h1 className="w-full flex justify-center items-center text-4xl font-['poppins'] font-bold mb-5 ">
-              Menu{" "}
+            <h1 className="lg:pl-10 pl-2 w-full flex items-center text-4xl font-['poppins'] font-bold mb-2 ">
+              Menu
               <span className="h-full">
                 <FontAwesomeIcon
                   icon={faX}
-                  className="absolute right-3 text-2xl top-7 cursor-pointer"
+                  className="absolute right-3 text-2xl top-7 cursor-pointer lg:hidden block"
                   onClick={() => setOpenmenu(!openmenu)}
                 />
               </span>
@@ -35,11 +35,11 @@ const Menu = () => {
         </div>
         <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll bg-red-500 px-1 ">
           <div className="w-full h-[80px] bg-green-400 flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl text-2xl font-bold font-['inter']">
+            <h1 className="md:text-4xl pt-2 text-2xl font-bold font-['inter']">
               Beverages
             </h1>
             <div
-              className={`md:w-[270px] w-[220px] px-2 h-full flex justify-center items-center relative ${
+              className={`lg:z-0 md:w-[270px] w-[220px] px-2 pt-2 h-full flex justify-center items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
             >
@@ -56,7 +56,7 @@ const Menu = () => {
           </div>
           <FontAwesomeIcon
             icon={faBook}
-            className={`lg:hidden block mt-5 text-xl cursor-pointer`}
+            className={`lg:hidden block mt-5 text-3xl cursor-pointer`}
             onClick={() => setOpenmenu(!openmenu)}
           />
           <div>

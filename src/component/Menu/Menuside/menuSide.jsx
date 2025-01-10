@@ -1,5 +1,5 @@
 import { MenuDetail } from "../../../data/Drink";
-import Menu from "./menu";
+import Menu from "./submenu";
 
 const menuSide = () => {
   return (

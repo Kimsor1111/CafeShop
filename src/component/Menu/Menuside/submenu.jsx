@@ -14,7 +14,7 @@ const menu = ({ title, submenu, menuid }) => {
         } border-black justify-center  `}
       >
         <h1
-          className={`w-[220px] py-7 h-[40px] relative flex items-center pl-1 text-xl font-['poppins'] font-semibold `}
+          className={`lg:w-[220px] lg:pl-1 w-full py-7 h-[40px] relative flex items-center pl-2 text-xl font-['poppins'] font-semibold `}
         >
           {title}
         </h1>
@@ -34,7 +34,7 @@ const menu = ({ title, submenu, menuid }) => {
         {submenu.map((s, index) => (
           <li
             key={index}
-            className="w-[210px] text-start font-['poppins'] text-md"
+            className="lg:ml-0 lg:w-[210px] ml-2 w-full text-start font-['poppins'] text-md"
           >
             <a href="" className="hover:underline hover:text-gray-800">{s}</a>
           </li>

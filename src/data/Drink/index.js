@@ -4,8 +4,8 @@ export const MenuDetail = [
     submenu: [
       "Coffee & Espresso",
       "Cold Brew",
-      "Frappuccino Blended Coffee",
-      "Frappuccino Blended Cream",
+      "Frappuccino Coffee",
+      "Frappuccino Cream",
       "Iced Beverages",
       "Iced Tea",
       "Refresher",

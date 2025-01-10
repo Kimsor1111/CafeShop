@@ -6,9 +6,9 @@ import {
   faHome,
   faBook,
   faContactBook,
-  faBowlFood,
   faX,
   faLocationDot,
+  faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -26,7 +26,7 @@ const NavbarList = [
     path: "/menu",
   },
   {
-    icon: faBowlFood,
+    icon: faAddressCard,
     name: "About",
     path: "/about",
   },
@@ -58,7 +58,7 @@ const Navbar = () => {
             <li
               onClick={() => setIsopen(false)}
               key={index}
-              className="w-full h-[60px] mt-5 relative after:absolute after:content-[''] after:bottom-0 after:h-[5px] after:bg-white after:w-0 hover:after:w-full after:left-0 after:transition-all after:duration-500"
+              className="w-full h-[60px] mt-5"
             >
               <Link
                 to={path}
