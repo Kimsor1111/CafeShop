@@ -10,7 +10,7 @@ const Menu = () => {
   const [openmenu, setOpenmenu] = useState(false);
   return (
     <>
-      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[#ffecd5] flex items-center font-['poppins'] font-semibold border-b border-black">
+      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[#ffecd5] flex items-center font-['poppins'] font-semibold border-b border-black mb-2">
         Menu {">"} Beverages
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
@@ -19,13 +19,13 @@ const Menu = () => {
             openmenu ? "" : "-translate-x-full"
           }`}
         >
-          <div className="w-full h-screen flex items-center flex-col py-5">
-            <h1 className="lg:pl-10 pl-2 w-full flex items-center text-4xl font-['poppins'] font-bold mb-2 ">
+          <div className="w-full h-screen flex items-center flex-col">
+            <h1 className="lg:pl-10 pl-2 w-full flex items-center text-4xl font-['poppins'] font-bold ">
               Menu
               <span className="h-full">
                 <FontAwesomeIcon
                   icon={faX}
-                  className="absolute right-3 text-2xl top-7 cursor-pointer lg:hidden block"
+                  className="absolute right-3 text-2xl top-[7px] cursor-pointer lg:hidden block"
                   onClick={() => setOpenmenu(!openmenu)}
                 />
               </span>
@@ -35,11 +35,11 @@ const Menu = () => {
         </div>
         <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll bg-red-500 px-1 ">
           <div className="w-full h-[80px] bg-green-400 flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl pt-2 text-2xl font-bold font-['inter']">
+            <h1 className="md:text-4xl text-2xl font-bold font-['inter']">
               Beverages
             </h1>
             <div
-              className={`lg:z-0 md:w-[270px] w-[220px] px-2 pt-2 h-full flex justify-center items-center relative ${
+              className={`lg:z-0 md:w-[270px] w-[220px] px-2 h-full flex justify-center items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
             >

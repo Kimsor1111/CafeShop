@@ -11,7 +11,7 @@ const menu = ({ title, submenu, menuid }) => {
           isopen ? "border-y" : "border-t"
         } ${
           menuid % 2 == 0 ? "border-y" : ""
-        } border-black justify-center  `}
+        } border-black justify-center mt-2 `}
       >
         <h1
           className={`lg:w-[220px] lg:pl-1 w-full py-7 h-[40px] relative flex items-center pl-2 text-xl font-['poppins'] font-semibold `}
