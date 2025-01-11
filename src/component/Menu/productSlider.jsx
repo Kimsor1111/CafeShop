@@ -16,9 +16,12 @@ const productSlider = ({ title, product, sliderindex }) => {
       <div className="w-full h-[60px] flex flex-row gap-5 justify-between items-center">
         <h1 className="text-[18px] font-bold font-['poppins']">{title}</h1>
         <div className="w-[90px] h-[20px]">
-          <button className="size-full text-[14px] flex justify-center items-center rounded-[10px] border border-black  font-bold font-['inter'] hover:bg-[rgb(71,51,38)] hover:text-white duration-200">
+          <Link
+            to={`category/${title.replaceAll(" ", "_")}`}
+            className="size-full text-[14px] flex justify-center items-center rounded-[10px] border border-black  font-bold font-['inter'] hover:bg-[rgb(71,51,38)] hover:text-white duration-200"
+          >
             View All
-          </button>
+          </Link>
         </div>
       </div>
       <div className="absolute z-[97] top-[50%] left-1 lg:block hidden cursor-pointer">
@@ -36,7 +39,11 @@ const productSlider = ({ title, product, sliderindex }) => {
           style={{ width: `${315 * product.length}px` }}
         >
           {product.map(({ id, name, img }) => (
-            <Link to={`${id.toString()}`} key={id} className="w-[300px]">
+            <Link
+              to={`detail/${name.replaceAll(" ", "_")}`}
+              key={id}
+              className="w-[300px]"
+            >
               <div className=" w-full h-[300px] bg-[rgba(233,216,199,255)] mb-3">
                 <img
                   src={img}

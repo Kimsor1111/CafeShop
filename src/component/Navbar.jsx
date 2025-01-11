@@ -1,6 +1,4 @@
 import {
-  faMagnifyingGlass,
-  faUser,
   faBars,
   faHome,
   faBook,

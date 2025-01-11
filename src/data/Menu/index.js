@@ -146,33 +146,21 @@ export const Product = [
         id: 1,
         name: "Americano",
         img: CE1,
-        energy: 4,
-        ingredients: "Water, Espresso",
-        des: "Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance. Pro Tip: For an additional boost, ask your barista to try this with an extra shot.",
       },
       {
         id: 2,
         name: "Brewed Coffee",
         img: CE2,
-        energy: 10,
-        ingredients: "Brewed Coffee, Water",
-        des: "Our iconic Pike Place blend brewed to perfection for that perfect, on-the-go cup, Make it yours with MILKLAB Oat, Almond, Soy or Coconut milk and plant-based whipped cream",
       },
       {
         id: 3,
         name: "Coffee Latte",
         img: CE3,
-        energy: 519,
-        ingredients: "Espresso, Milk",
-        des: "This is the original coffeehouse classic. And like most classics, part of its appeal comes from its simplicity. A caffè latte is simply a shot or two of bold, tasty espresso with fresh, sweet steamed milk over it. Some prefer to add syrup or extra espresso to the recipe. Some maintain that it is entirely perfect as is.",
       },
       {
         id: 4,
         name: "Coffee Mocha",
         img: CE4,
-        energy: 928,
-        ingredients: "Mocha Sauce",
-        des: "There's no question that chocolate and coffee are flavours meant for each other. Both are rich and full of depth. Where one is creamy, the other is roasty. They complement each other perfectly. And when they come together under a fluffy cloud of sweetened whipped cream, you’ll wish their union would last forever.",
       },
       {
         id: 5,
@@ -482,7 +470,7 @@ export const Product = [
     ],
   },
   {
-    title: "Refresh",
+    title: "Refresher",
     product: [
       {
         id: 61,
@@ -770,11 +758,6 @@ export const Product = [
         img: ST7,
       },
       {
-        id: 113,
-        name: "Coconut Tea Cake",
-        img: ST8,
-      },
-      {
         id: 114,
         name: "Confetti Cookie",
         img: ST9,
@@ -783,6 +766,11 @@ export const Product = [
         id: 115,
         name: "Donut Cookie",
         img: ST10,
+      },
+      {
+        id: 113,
+        name: "Coconut Tea Cake",
+        img: ST8,
       },
     ],
   },

@@ -16,7 +16,7 @@ const menu = ({ menuid, title, submenu }) => {
         onClick={() => setIsopen(!isopen)}
       >
         <h1
-          className={`lg:pl-10 pl-2  w-full py-6 h-[40px] relative flex items-center text-xl font-['poppins'] font-semibold `}
+          className={`lg:pl-10 pl-2 w-full py-6 h-[40px] relative flex items-center text-xl font-['poppins'] font-semibold `}
         >
           {title}
         </h1>
@@ -29,7 +29,7 @@ const menu = ({ menuid, title, submenu }) => {
       </div>
       <ul
         className={`w-full ${
-          isopen ? "flex h-fit py-2" : "opacity-0 h-0 py-0"
+          isopen ? "flex h-fit py-2" : "opacity-0 invisible h-0 py-0"
         } ease-in-out transition-all duration-[70ms] flex flex-col gap-2`}
       >
         {submenu.map((s, index) => (
@@ -37,9 +37,12 @@ const menu = ({ menuid, title, submenu }) => {
             key={index}
             className="lg:pl-10 pl-2 w-full text-start font-['poppins'] text-md"
           >
-            <a className="hover:underline cursor-pointer hover:text-gray-800">
+            <Link
+              to={`../menu/category/${s.replaceAll(" ", "_")}`}
+              className="hover:underline cursor-pointer hover:text-gray-800"
+            >
               {s}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

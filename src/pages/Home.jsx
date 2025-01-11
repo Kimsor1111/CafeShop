@@ -66,11 +66,11 @@ const Home = () => {
         </span>
       </h1>
       <div className="lg:gap-5 lg:px-5 lg:grid-cols-3 md:grid-cols-2 md:px-16 grid-cols-1 place-items-center pb-10 grid gap-5 px-5 bg-[rgba(233,216,199,255)]">
-        {featurePrd.map(({ img, title, type, price, pricedot }, index) => (
+        {featurePrd.map(({ id, img, name, type, price, pricedot }) => (
           <FeaturePrd
-            key={index}
+            key={id}
             img={img}
-            title={title}
+            name={name}
             type={type}
             price={price}
             pricedot={pricedot}

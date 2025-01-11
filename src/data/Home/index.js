@@ -4,7 +4,7 @@ import FeatureDesert from "./../../assets/images/featureTop2.png";
 import FeatureMid1 from "./../../assets/images/featureMid1.jpg";
 import FeatureMid2 from "./../../assets/images/featureMid2.jpg";
 import featurePrd1 from "./../../assets/images/featurePrd1.jpg";
-import featurePrd2 from "./../../assets/images/featurePrd2.jpg";
+import featurePrd2 from "./../../assets/product/Beverages/f_coffee1.jpg";
 import featurePrd3 from "./../../assets/images/featurePrd3.jpg";
 import featurePrd4 from "./../../assets/images/featurePrd4.jpg";
 import featurePrd5 from "./../../assets/images/featurePrd5.jpg";
@@ -56,52 +56,58 @@ export const featureMid = [
 
 export const featurePrd = [
   {
+    id: 46,
     img: featurePrd1,
-    title: "Iced Cuppuchino",
+    name: "Iced Cuppuchino",
     type: "Drink - Cafe",
-    price: "4",
-    pricedot: ".59",
-    total: 4.59,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
   {
+    id: 21,
     img: featurePrd2,
-    title: "Classic Iced Chocolate",
+    name: "Caramel Coffee",
     type: "Drink - Chocolate",
-    price: "4",
-    pricedot: ".99",
-    total: 4.99,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
   {
+    id: 48,
     img: featurePrd3,
-    title: "Iced Latte",
+    name: "Iced Latte",
     type: "Drink - Cafe",
-    price: "4",
-    pricedot: ".29",
-    total: 4.29,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
   {
+    id: 79,
     img: featurePrd4,
-    title: "Almond Croissant",
+    name: "Almond Croissant",
     type: "Food - Bakery",
-    price: "2",
-    pricedot: ".49",
-    total: 2.49,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
   {
+    id: 91,
     img: featurePrd5,
-    title: "Cheese & Tomato Toastie",
+    name: "Cheese & Tomato Toastie",
     type: "Food - Lunch",
-    price: "1",
-    pricedot: ".99",
-    total: 1.99,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
   {
+    id: 110,
     img: featurePrd6,
-    title: "Chocolate Chip Cookie",
+    name: "Chocolate Chip Cookie",
     type: "Food - Sweet Treats",
-    price: "2",
-    pricedot: ".55",
-    total: 2.55,
+    price: "$",
+    pricedot: ".$$",
+    total: "$$$",
   },
 ];
 

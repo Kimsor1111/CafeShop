@@ -1,6 +1,6 @@
 import RootLayout from "./layout/RootLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, MenuProduct, Detail } from "./pages";
+import { Home, MenuProduct, Detail, Category } from "./pages";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -15,9 +15,14 @@ const Router = createBrowserRouter([
         element: <MenuProduct />,
       },
       {
-        path: "menu/:id",
+        path: "menu/detail/:nameurl",
         element: <Detail />,
         errorElement: "Product Not Found",
+      },
+      {
+        path: "menu/category/:category",
+        element: <Category />,
+        errorElement: "Categorys Not Found",
       },
       {
         path: "about",

@@ -6,10 +6,10 @@ import { faBackward } from "@fortawesome/free-solid-svg-icons";
 
 const Detail = () => {
   let submenu;
-  const { id } = useParams();
-  const { name, img, energy, ingredients, des } = Product.find((category) =>
-    category.product.some((item) => item.id === Number(id))
-  )?.product.find((item) => item.id === Number(id));
+  const { nameurl } = useParams();
+  const { id, name, img } = Product.find((category) =>
+    category.product.some((item) => item.name === nameurl.replaceAll("_", " "))
+  )?.product.find((item) => item.name === nameurl.replaceAll("_", " "));
   if (id >= 1 && id <= 10) submenu = "Coffee & Espresso";
   else if (id >= 11 && id <= 20) submenu = "Cold Brew";
   else if (id >= 21 && id <= 30) submenu = "Frappuccino Coffee";
@@ -25,7 +25,7 @@ const Detail = () => {
   return (
     <>
       <h1 className="lg:pl-10 md:text-xl pl-2 w-full h-[40px] sticky text-md top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
-        Menu {">"} Beverages & Foods {">"} {submenu}
+        {submenu} {">"} {name}
       </h1>
       <Link to={"/menu"}>
         <FontAwesomeIcon
@@ -45,19 +45,21 @@ const Detail = () => {
             {name}
           </h1>
           <h1 className="lg:text-2xl text-xl font-['poppins'] font-bold">
-            Energy:
-            <span className="font-semibold text-lg font-sans">
-              {" "}
-              {energy} KJ
-            </span>
+            Price:
+            <span className="font-semibold text-lg font-sans"> $$$</span>
           </h1>
           <h1 className="lg:text-2xl text-xl font-['poppins'] font-bold">
             Ingredients:{" "}
             <span className="lg:text-xl text-lg font-normal font-sans">
-              {ingredients}{" "}
+              Ingredients1, Ingredients2
             </span>
           </h1>
-          <h1 className="lg:text-xl text-lg">{des}</h1>
+          <h1 className="lg:text-xl text-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
+            repudiandae mollitia fuga ullam quidem illo ab cumque sed iusto
+            nisi, quod pariatur odio. Cum praesentium ab quis ea tenetur
+            tempora?
+          </h1>
           <div className="w-full h-[50px] flex items-center mt-2">
             <button className="w-[200px] font-bold font-[poppins] border-2 border-black h-full text-xl text-gray-900 duration-200 hover:bg-[rgb(71,51,38)] hover:text-white">
               Order Now
