@@ -4,7 +4,7 @@ import FeatureDesert from "./../../assets/images/featureTop2.png";
 import FeatureMid1 from "./../../assets/images/featureMid1.jpg";
 import FeatureMid2 from "./../../assets/images/featureMid2.jpg";
 import featurePrd1 from "./../../assets/images/featurePrd1.jpg";
-import featurePrd2 from "./../../assets/Product/Beverages/f_coffee1.jpg";
+import featurePrd2 from "./../../assets/images/featurePrd2.jpg";
 import featurePrd3 from "./../../assets/images/featurePrd3.jpg";
 import featurePrd4 from "./../../assets/images/featurePrd4.jpg";
 import featurePrd5 from "./../../assets/images/featurePrd5.jpg";
