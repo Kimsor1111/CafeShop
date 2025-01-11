@@ -17,6 +17,7 @@ const Router = createBrowserRouter([
       {
         path: "menu/:id",
         element: <Detail />,
+        errorElement: "Product Not Found",
       },
       {
         path: "about",

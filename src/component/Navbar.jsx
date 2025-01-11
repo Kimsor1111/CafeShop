@@ -90,7 +90,10 @@ const Navbar = () => {
       </div>
       <nav className="w-full h-[70px] bg-[rgb(170,144,120)] sticky top-0 z-[101]">
         <div className="lg:px-10 size-full px-2 flex flex-row justify-between">
-          <h1 className='lg:text-4xl w-fit h-full text-2xl flex items-center font-bold font-["inter"] text-white'>
+          <h1
+            className='lg:text-4xl w-fit h-full text-2xl flex items-center font-bold font-["inter"] text-white'
+            style={{ letterSpacing: "1.5px" }}
+          >
             BrandName
           </h1>
           <ul className="lg:flex w-fit h-full flex-row items-center gap-5 px-5 hidden">
@@ -110,22 +113,11 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="w-fit h-full flex flex-row items-center gap-1">
-            <div className="w-[35px] h-1/2 flex justify-center items-center">
-              <FontAwesomeIcon
-                icon={faMagnifyingGlass}
-                className="lg:text-2xl text-xl cursor-pointer text-white"
-              />
-            </div>
-            <div className="w-[35px] h-1/2 flex justify-center items-center">
-              <FontAwesomeIcon
-                icon={faUser}
-                className="lg:text-2xl text-xl cursor-pointer text-white"
-              />
-            </div>
-            <div className="w-[35px] h-1/2 flex justify-center items-center">
+            <div className="md:text-lg text-sm w-[130px] h-1/2 flex justify-center items-center  text-white font-bold cursor-pointer">
+              Find a Store
               <FontAwesomeIcon
                 icon={faLocationDot}
-                className="lg:text-2xl text-xl cursor-pointer text-white"
+                className="ml-2 lg:text-2xl text-xl cursor-pointer text-white"
               />
             </div>
             <div className="lg:hidden w-[35px] h-1/2 justify-center items-center flex">

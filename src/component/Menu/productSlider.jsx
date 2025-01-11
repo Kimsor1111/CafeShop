@@ -44,7 +44,9 @@ const productSlider = ({ title, product, sliderindex }) => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="text-md 2x:text-lg font-normal font-['poppins']">{name}</div>
+              <div className="text-md 2x:text-lg font-normal font-['poppins']">
+                {name}
+              </div>
             </Link>
           ))}
         </div>

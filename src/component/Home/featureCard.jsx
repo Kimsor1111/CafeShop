@@ -11,14 +11,14 @@ const cardFeature = ({ icon, title, des }) => {
   };
   return (
     <div
-      className={`xl:w-[90%] lg:flex-col lg:rounded-[40px] lg:justify-center lg:px-0 px-10 items-center justify-between w-full h-full duration-150 flex flex-row cursor-pointer ${
+      className={`xl:w-[90%] lg:flex-col lg:rounded-[40px] lg:justify-center lg:px-0 md:px-10 px-2 items-center justify-between w-full h-full duration-150 flex flex-row cursor-pointer ${
         ishover ? "bg-[rgb(71,51,38)]" : "bg-[rgba(253,240,224,255)] "
       }`}
       onMouseOver={CardMouseover}
       onMouseOut={CardMouseout}
     >
       <div className="xl:h-[90px] lg:h-[70px] lg:justify-center lg:w-full h-[50px] w-fit flex items-center">
-        <div className="xl:size-[70px] lg:size-[50px] size-[40px] bg-[rgba(253,240,224,255)] rounded-full flex justify-center items-center">
+        <div className="xl:size-[70px] lg:size-[50px] md:size-[40px] size-[35px] bg-[rgba(253,240,224,255)] rounded-full flex justify-center items-center">
           <FontAwesomeIcon
             icon={icon}
             className="xl:text-2xl text-xl"
@@ -26,7 +26,7 @@ const cardFeature = ({ icon, title, des }) => {
         </div>
       </div>
       <h1
-        className={`xl:text-2xl lg:ml-0 lg:text-xl ml-1 text-sm text-md mt-2 pb-2 font-bold font-['inter'] ${
+        className={`xl:text-2xl lg:text-xl lg:ml-0 lg:w-full lg:text-center md:text-md w-[180px] ml-2 text-sm mt-2 pb-2 font-bold font-['inter'] ${
           ishover ? "text-[rgba(253,240,224,255)]" : "text-black"
         }`}
       >
@@ -41,11 +41,11 @@ const cardFeature = ({ icon, title, des }) => {
       </h1>
       <div className="xl:h-[60px] lg:w-full lg:h-[50px] lg:px-5 lg:mt-6 flex w-fit h-full items-center">
         <button
-          className={`xl:w-[180px] xl:h-[40px] xl:text-lg lg:w-[140px] lg:h-[35px] w-[110px] ${
+          className={`xl:w-[180px] xl:h-[40px] xl:text-lg lg:w-[140px] lg:h-[35px] md:w-[110px] w-[80px] ${
             ishover
               ? "text-[rgb(71,51,38)] bg-[rgba(253,240,224,255)]"
               : "text-white bg-[rgb(71,51,38)]"
-          } font-bold text-md font-['inter'] rounded-[25px]`}
+          } font-bold text-[13px] font-['inter'] rounded-[25px]`}
         >
           See More
         </button>

@@ -12,7 +12,7 @@ const Menu = () => {
   const [opensearch, setOpensearch] = useState(false);
   return (
     <>
-      <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
+      <h1 className="lg:pl-10 md:text-xl pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
         Menu {">"} Beverages & Foods
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
