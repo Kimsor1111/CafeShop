@@ -1,7 +1,6 @@
 import {
   faMagnifyingGlass,
   faUser,
-  faShoppingCart,
   faBars,
   faHome,
   faBook,
@@ -99,11 +98,11 @@ const Navbar = () => {
               <li
                 onClick={() => setIsopen(false)}
                 key={index}
-                className="w-fit h-1/2 px-5 relative after:absolute after:content-[''] after:bottom-0 after:h-[5px] after:bg-white after:w-0 hover:after:w-full after:left-0 after:transition-all after:duration-500"
+                className="w-fit h-1/2 relative after:absolute after:content-[''] after:bottom-0 after:h-[5px] after:bg-white after:w-0 hover:after:w-full after:left-0 after:transition-all after:duration-500"
               >
                 <Link
                   to={path}
-                  className="w-full h-full text-xl font-bold font-['poppins'] flex justify-center items-center text-white"
+                  className="px-5 h-full text-xl font-bold font-['poppins'] flex justify-center items-center text-white"
                 >
                   {name}
                 </Link>
@@ -125,7 +124,7 @@ const Navbar = () => {
             </div>
             <div className="w-[35px] h-1/2 flex justify-center items-center">
               <FontAwesomeIcon
-                icon={faShoppingCart}
+                icon={faLocationDot}
                 className="lg:text-2xl text-xl cursor-pointer text-white"
               />
             </div>

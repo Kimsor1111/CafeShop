@@ -7,9 +7,9 @@ import {
   faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
 const Menu = () => {
   const [openmenu, setOpenmenu] = useState(false);
+  const [opensearch, setOpensearch] = useState(false);
   return (
     <>
       <h1 className="lg:pl-10 pl-2 w-full h-[40px] sticky top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
@@ -35,24 +35,26 @@ const Menu = () => {
             <MenuSide />
           </div>
         </div>
-        <div className="lg:w-[78%] lg:px-16 md:px-10 w-full overflow-scroll px-5 ">
-          <div className="w-full h-[70px] flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl w-[70%] text-lg font-bold font-['inter']">
+        <div className="lg:w-[78%] lg:px-16 px-2 w-full overflow-scroll">
+          <div className="md:flex-row md:items-center w-full h-[70px] flex flex-row justify-between items-center">
+            <h1 className="md:text-4xl w-[80%] text-xl font-bold font-['inter']">
               Beverages & Foods
             </h1>
             <div
-              className={`lg:z-0 md:w-[270px] w-[50px] px-2 h-full flex justify-center items-center relative ${
+              className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
             >
               <input
                 type="text"
-                className="md:block hidden w-full h-1/2 rounded-[25px] pl-3 outline-none border-none placeholder:font-['poppins']"
+                className={`md:block ease-linear duration-[0.4s] h-1/2 rounded-[25px] outline-none border-none placeholder:font-['poppins']
+                  ${opensearch ? "w-full pl-3" : "w-0"}`}
                 placeholder="Search"
               />
               <FontAwesomeIcon
                 icon={faMagnifyingGlass}
                 className="absolute right-5 text-xl cursor-pointer"
+                onClick={() => setOpensearch(!opensearch)}
               ></FontAwesomeIcon>
             </div>
           </div>

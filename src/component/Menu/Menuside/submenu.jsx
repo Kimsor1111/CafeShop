@@ -3,24 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const menu = ({ id, title, submenu, menuid }) => {
+const menu = ({ menuid, title, submenu }) => {
   const [isopen, setIsopen] = useState(false);
   return (
     <>
       <div
-        className={`w-full relative flex flex-row items-center ${
+        className={`w-full relative flex flex-row items-center cursor-pointer ${
           isopen ? "border-y" : "border-t"
         } ${
           menuid % 2 == 0 ? "border-y" : "mt-2"
         } border-black justify-center `}
+        onClick={() => setIsopen(!isopen)}
       >
-        <Link
+        <h1
           className={`lg:pl-10 pl-2  w-full py-6 h-[40px] relative flex items-center text-xl font-['poppins'] font-semibold `}
         >
           {title}
-        </Link>
+        </h1>
         <FontAwesomeIcon
-          onClick={() => setIsopen(!isopen)}
           icon={faCaretDown}
           className={`${
             isopen ? "rotate-180" : "rotate-0"
@@ -37,7 +37,7 @@ const menu = ({ id, title, submenu, menuid }) => {
             key={index}
             className="lg:pl-10 pl-2 w-full text-start font-['poppins'] text-md"
           >
-            <a href="" className="hover:underline hover:text-gray-800">
+            <a className="hover:underline cursor-pointer hover:text-gray-800">
               {s}
             </a>
           </li>

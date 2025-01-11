@@ -1,47 +1,124 @@
-import CE1 from "./../../assets/Product/coffee_espresso1.jpg";
-import CE2 from "./../../assets/Product/coffee_espresso2.jpg";
-import CE3 from "./../../assets/Product/coffee_espresso3.jpg";
-import CE4 from "./../../assets/Product/coffee_espresso4.jpg";
-import CE5 from "./../../assets/Product/coffee_espresso5.jpg";
-import CE6 from "./../../assets/Product/coffee_espresso6.jpg";
-import CE7 from "./../../assets/Product/coffee_espresso7.jpg";
-import CE8 from "./../../assets/Product/coffee_espresso8.jpg";
-import CE9 from "./../../assets/Product/coffee_espresso9.jpg";
-import CE10 from "./../../assets/Product/coffee_espresso10.jpg";
-import CB1 from "./../../assets/Product/cold_brew1.jpg";
-import CB2 from "./../../assets/Product/cold_brew2.jpg";
-import CB3 from "./../../assets/Product/cold_brew3.jpg";
-import CB4 from "./../../assets/Product/cold_brew4.jpg";
-import CB5 from "./../../assets/Product/cold_brew5.jpg";
-import CB6 from "./../../assets/Product/cold_brew6.jpg";
-import CB7 from "./../../assets/Product/cold_brew7.jpg";
-import CB8 from "./../../assets/Product/cold_brew8.jpg";
-import CB9 from "./../../assets/Product/cold_brew9.jpg";
-import CB10 from "./../../assets/Product/cold_brew10.jpg";
-import FCE1 from "./../../assets/Product/f_coffee1.jpg";
-import FCE2 from "./../../assets/Product/f_coffee2.jpg";
-import FCE3 from "./../../assets/Product/f_coffee3.jpg";
-import FCE4 from "./../../assets/Product/f_coffee4.jpg";
-import FCE5 from "./../../assets/Product/f_coffee5.jpg";
-import FCE6 from "./../../assets/Product/f_coffee6.jpg";
-import FCE7 from "./../../assets/Product/f_coffee7.jpg";
-import FCE8 from "./../../assets/Product/f_coffee8.jpg";
-import FCE9 from "./../../assets/Product/f_coffee9.jpg";
-import FCE10 from "./../../assets/Product/f_coffee10.jpg";
-import FCM1 from "./../../assets/Product/f_cream1.jpg";
-import FCM2 from "./../../assets/Product/f_cream2.jpg";
-import FCM3 from "./../../assets/Product/f_cream3.jpg";
-import FCM4 from "./../../assets/Product/f_cream4.jpg";
-import FCM5 from "./../../assets/Product/f_cream5.jpg";
-import FCM6 from "./../../assets/Product/f_cream6.jpg";
-import FCM7 from "./../../assets/Product/f_cream7.jpg";
-import FCM8 from "./../../assets/Product/f_cream8.jpg";
-import FCM9 from "./../../assets/Product/f_cream9.jpg";
-import FCM10 from "./../../assets/Product/f_cream10.jpg";
+import {
+  CE1,
+  CE2,
+  CE3,
+  CE4,
+  CE5,
+  CE6,
+  CE7,
+  CE8,
+  CE9,
+  CE10,
+  CB1,
+  CB2,
+  CB3,
+  CB4,
+  CB5,
+  CB6,
+  CB7,
+  CB8,
+  CB9,
+  CB10,
+  FCE1,
+  FCE2,
+  FCE3,
+  FCE4,
+  FCE5,
+  FCE6,
+  FCE7,
+  FCE8,
+  FCE9,
+  FCE10,
+  FCM1,
+  FCM2,
+  FCM3,
+  FCM4,
+  FCM5,
+  FCM6,
+  FCM7,
+  FCM8,
+  FCM9,
+  FCM10,
+  IB1,
+  IB2,
+  IB3,
+  IB4,
+  IB5,
+  IB6,
+  IB7,
+  IB8,
+  IB9,
+  IB10,
+  IT1,
+  IT2,
+  IT3,
+  IT4,
+  IT5,
+  IT6,
+  IT7,
+  IT8,
+  IT9,
+  IT10,
+  RF1,
+  RF2,
+  RF3,
+  RF4,
+  RF5,
+  RF6,
+  RF7,
+  RF8,
+  TC1,
+  TC2,
+  TC3,
+  TC4,
+  TC5,
+  TC6,
+  TC7,
+  TC8,
+  TC9,
+  TC10,
+  BK1,
+  BK2,
+  BK3,
+  BK4,
+  BK5,
+  BK6,
+  BK7,
+  BK8,
+  BK9,
+  BK10,
+  LH1,
+  LH2,
+  LH3,
+  LH4,
+  LH5,
+  LH6,
+  LH7,
+  LH8,
+  LH9,
+  LH10,
+  ST1,
+  ST2,
+  ST3,
+  ST4,
+  ST5,
+  ST6,
+  ST7,
+  ST8,
+  ST9,
+  ST10,
+  SS1,
+  SS2,
+  SS3,
+  SS4,
+  SS5,
+  SS6,
+  SS7,
+} from "../../assets/Product";
 
 export const MenuDetail = [
   {
-    id: 1,
+    menuid: 1,
     title: "Beverages",
     submenu: [
       "Coffee & Espresso",
@@ -55,7 +132,7 @@ export const MenuDetail = [
     ],
   },
   {
-    id: 2,
+    menuid: 2,
     title: "Foods",
     submenu: ["Bakery", "Lunch", "Salads & Snacks", "Sweet Treats"],
   },
@@ -279,6 +356,421 @@ export const Product = [
         id: 40,
         name: "Strawberry Matcha Green Tea",
         img: FCM10,
+      },
+    ],
+  },
+  {
+    title: "Iced Beverages",
+    product: [
+      {
+        id: 41,
+        name: "Brown Sugar Iced Shaken Espresso",
+        img: IB1,
+      },
+      {
+        id: 42,
+        name: "Classic Iced Chocolate",
+        img: IB2,
+      },
+      {
+        id: 43,
+        name: "Dirty Chai Iced Shaken Espresso",
+        img: IB3,
+      },
+      {
+        id: 44,
+        name: "Iced Americano",
+        img: IB4,
+      },
+      {
+        id: 45,
+        name: "Iced Caffe Mocha",
+        img: IB5,
+      },
+      {
+        id: 46,
+        name: "Iced Cappuccino",
+        img: IB6,
+      },
+      {
+        id: 47,
+        name: "Iced Caramel Macchiato",
+        img: IB7,
+      },
+      {
+        id: 48,
+        name: "Iced Latte",
+        img: IB8,
+      },
+      {
+        id: 49,
+        name: "Iced White Chocolate Mocha",
+        img: IB9,
+      },
+      {
+        id: 50,
+        name: "Salted Caramel Iced Shaken Espresso",
+        img: IB10,
+      },
+    ],
+  },
+  {
+    title: "Iced Tea",
+    product: [
+      {
+        id: 51,
+        name: "Iced Chai Tea Latte",
+        img: IT1,
+      },
+      {
+        id: 52,
+        name: "Classic Iced Chocolate",
+        img: IT2,
+      },
+      {
+        id: 53,
+        name: "Iced Grean Tea Lemonade",
+        img: IT3,
+      },
+      {
+        id: 54,
+        name: "Iced Hibicus Tea Lemonade",
+        img: IT4,
+      },
+      {
+        id: 55,
+        name: "Iced Matcha & Espresso Fusion",
+        img: IT5,
+      },
+      {
+        id: 56,
+        name: "Iced Shaken Black Tea With Ruby Grapefruit & Honey",
+        img: IT6,
+      },
+      {
+        id: 57,
+        name: "Iced Strawberry Green Tea Lemonade",
+        img: IT7,
+      },
+      {
+        id: 58,
+        name: "Mango Passion Fruit Green Tea",
+        img: IT8,
+      },
+      {
+        id: 59,
+        name: "Pink Guava Apple Juice Fruit",
+        img: IT9,
+      },
+      {
+        id: 60,
+        name: "Raspberry Black Currant Black Tea",
+        img: IT10,
+      },
+    ],
+  },
+  {
+    title: "Refresh",
+    product: [
+      {
+        id: 61,
+        name: "Dragon Drink",
+        img: RF1,
+      },
+      {
+        id: 62,
+        name: "Dragon Drink Frozen Refresher",
+        img: RF2,
+      },
+      {
+        id: 63,
+        name: "Mango Dragonfruit Lemonade Frozen Refresher",
+        img: RF3,
+      },
+      {
+        id: 64,
+        name: "Mango Dragonfruit Refresher",
+        img: RF4,
+      },
+      {
+        id: 65,
+        name: "Pink Drink",
+        img: RF5,
+      },
+      {
+        id: 66,
+        name: "Pink Drink Frozen Refresher",
+        img: RF6,
+      },
+      {
+        id: 67,
+        name: "Strawberry Acai Refresher",
+        img: RF7,
+      },
+      {
+        id: 68,
+        name: "Strawberry Acai Lemonade Frozen Refresher",
+        img: RF8,
+      },
+    ],
+  },
+  {
+    title: "Tea & Chocolate",
+    product: [
+      {
+        id: 69,
+        name: "Black Tea With Ruby Grapefruit & Honey",
+        img: TC1,
+      },
+      {
+        id: 70,
+        name: "Chai Tea Latte",
+        img: TC2,
+      },
+      {
+        id: 71,
+        name: "Classic Hot Chocolate",
+        img: TC3,
+      },
+      {
+        id: 72,
+        name: "White Hot Chocolate",
+        img: TC4,
+      },
+      {
+        id: 73,
+        name: "Emperor's Clouds & Mist Green Tea",
+        img: TC5,
+      },
+      {
+        id: 74,
+        name: "English Breakfast Tea",
+        img: TC6,
+      },
+      {
+        id: 75,
+        name: "English Breakfast Latte",
+        img: TC7,
+      },
+      {
+        id: 76,
+        name: "Espresso & Matcha Fusion",
+        img: TC8,
+      },
+      {
+        id: 77,
+        name: "Green Tea Latte",
+        img: TC9,
+      },
+      {
+        id: 78,
+        name: "Matcha With Strawberry Cold Foam",
+        img: TC10,
+      },
+    ],
+  },
+  {
+    title: "Bakery",
+    product: [
+      {
+        id: 79,
+        name: "Almond Croissant",
+        img: BK1,
+      },
+      {
+        id: 80,
+        name: "Bacon, Egg, & Cheese Brekky Roll",
+        img: BK2,
+      },
+      {
+        id: 81,
+        name: "Banana Bread",
+        img: BK3,
+      },
+      {
+        id: 82,
+        name: "Blueberry Bagel",
+        img: BK4,
+      },
+      {
+        id: 83,
+        name: "Blueberry Crumble Muffin",
+        img: BK5,
+      },
+      {
+        id: 84,
+        name: "Butter Croissant",
+        img: BK6,
+      },
+      {
+        id: 85,
+        name: "Cheese & Bacon Danish",
+        img: BK7,
+      },
+      {
+        id: 86,
+        name: "Cinnamon Scroll",
+        img: BK8,
+      },
+      {
+        id: 87,
+        name: "Everything Seeded Bagel",
+        img: BK9,
+      },
+      {
+        id: 88,
+        name: "Ham & Cheese Croissant",
+        img: BK10,
+      },
+    ],
+  },
+  {
+    title: "Lunch",
+    product: [
+      {
+        id: 89,
+        name: "Falafel, Spinach & Pumpkin Wrap",
+        img: LH1,
+      },
+      {
+        id: 90,
+        name: "Chargrilled Vegetable & Vegan Feta Panini",
+        img: LH2,
+      },
+      {
+        id: 91,
+        name: "Cheese & Tomato Toastie",
+        img: LH3,
+      },
+      {
+        id: 92,
+        name: "Chicken & Avocado Panini",
+        img: LH4,
+      },
+      {
+        id: 93,
+        name: "Chicken & Avocado Wrap",
+        img: LH5,
+      },
+      {
+        id: 94,
+        name: "Chicken & Stuffing Toastie",
+        img: LH6,
+      },
+      {
+        id: 95,
+        name: "Chicken Caesar Wrap",
+        img: LH7,
+      },
+      {
+        id: 96,
+        name: "Eggs Benedict Panini",
+        img: LH8,
+      },
+      {
+        id: 97,
+        name: "Ham & Swiss Baguette",
+        img: LH9,
+      },
+      {
+        id: 98,
+        name: "Turkey Cranberry & Brie Baguette",
+        img: LH10,
+      },
+    ],
+  },
+  {
+    title: "Salads & Snacks",
+    product: [
+      {
+        id: 99,
+        name: "Chicken Caesar Salad",
+        img: SS1,
+      },
+      {
+        id: 100,
+        name: "Nut Mix",
+        img: SS2,
+      },
+      {
+        id: 101,
+        name: "Chicken, Pumpkin & Quinoa Salad",
+        img: SS3,
+      },
+      {
+        id: 102,
+        name: "Fruit Salad",
+        img: SS4,
+      },
+      {
+        id: 103,
+        name: "Grains, Greens & Seeds Salad",
+        img: SS5,
+      },
+      {
+        id: 104,
+        name: "Trail Mix",
+        img: SS6,
+      },
+      {
+        id: 105,
+        name: "Yoghurt & Muesli Pot",
+        img: SS7,
+      },
+    ],
+  },
+  {
+    title: "Sweet Treats",
+    product: [
+      {
+        id: 106,
+        name: "Caramel Iced Donut",
+        img:ST1,
+      },
+      {
+        id: 107,
+        name: "Caramel Slice",
+        img:ST2,
+      },
+      {
+        id: 108,
+        name: "Choc Sprinkle Donut",
+        img:ST3,
+      },
+      {
+        id: 109,
+        name: "Chocolate Caramel Tart",
+        img:ST4,
+      },
+      {
+        id: 110,
+        name: "Chocolate Chip Cookie",
+        img:ST5,
+      },
+      {
+        id: 111,
+        name: "Citrus Teacake",
+        img:ST6,
+      },
+      {
+        id: 112,
+        name: "Baked Cheesecake Slice",
+        img:ST7,
+      },
+      {
+        id: 113,
+        name: "Coconut Tea Cake",
+        img:ST8,
+      },
+      {
+        id: 113,
+        name: "Confetti Cookie",
+        img:ST9,
+      },
+      {
+        id: 115,
+        name: "Donut Cookie",
+        img:ST10,
       },
     ],
   },

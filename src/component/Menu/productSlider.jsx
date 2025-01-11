@@ -12,7 +12,7 @@ const productSlider = ({ title, product, sliderindex }) => {
     slider.scrollLeft = slider.scrollLeft + 300;
   };
   return (
-    <div className="w-full mt-10 relative">
+    <div className="max-w-full w-[3150px] mt-10 relative">
       <div className="w-full h-[60px] flex flex-row gap-5 justify-between items-center">
         <h1 className="text-[18px] font-bold font-['poppins']">{title}</h1>
         <div className="w-[90px] h-[20px]">
@@ -35,16 +35,16 @@ const productSlider = ({ title, product, sliderindex }) => {
           className={` flex flex-row gap-3 h-fit`}
           style={{ width: `${315 * product.length}px` }}
         >
-          {product.map(({ id, name, img }, index) => (
-            <Link to={id.toString()} key={index} className="w-[300px]">
-              <div className="w-full h-[300px] bg-[rgba(233,216,199,255)] mb-3">
+          {product.map(({ id, name, img }) => (
+            <Link to={`${id.toString()}`} key={id} className="w-[300px]">
+              <div className=" w-full h-[300px] bg-[rgba(233,216,199,255)] mb-3">
                 <img
                   src={img}
                   alt=""
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="text-lg font-normal font-['poppins']">{name}</div>
+              <div className="text-md 2x:text-lg font-normal font-['poppins']">{name}</div>
             </Link>
           ))}
         </div>

@@ -4,8 +4,8 @@ import Menu from "./submenu";
 const menuSide = () => {
   return (
     <>
-      {MenuDetail.map(({id, title, submenu }) => (
-        <Menu key={id} id={id} title={title} submenu={submenu} menuid={id} />
+      {MenuDetail.map(({menuid, title, submenu }) => (
+        <Menu key={menuid} menuid={menuid} title={title} submenu={submenu} />
       ))}
     </>
   );
