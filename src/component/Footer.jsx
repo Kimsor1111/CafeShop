@@ -1,6 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const footer = [
+    {
+      title: "Company",
+      submenu: ["About", "Careers", "Brand Center", "Blog"],
+    },
+    {
+      title: "Our Product",
+      submenu: ["Drink", "Dessert", "Sweet", "Frappuchino"],
+    },
+    {
+      title: "Policy",
+      submenu: [
+        "Privacy Policy",
+        "Licensing",
+        "Terms & Conditions",
+        "Franchise",
+      ],
+    },
+    {
+      title: "Contact Us",
+      submenu: ["Facebook", "Telegram", "Instagram", "Twitter"],
+    },
+  ];
   return (
     <>
       <div className="w-full h-[250px] bg-[rgb(170,144,120)] flex flex-col np justify-center items-center gap-10">
@@ -21,114 +45,22 @@ const Footer = () => {
       <footer className="bg-[rgb(170,144,120)] py-4">
         <div className="mx-auto w-full max-w-screen-xl">
           <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-            <div>
-              <h2 className="mb-6 text-md font-bold text-[rgb(71,51,38)] uppercase font-['poppins']">
-                Company
-              </h2>
-              <ul className="text-white font-medium font-['inter']">
-                <li className="mb-4">
-                  <a href="#" className=" hover:underline">
-                    About
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Careers
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Brand Center
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-md font-bold text-[rgb(71,51,38)] uppercase font-['poppins']">
-                Our Product
-              </h2>
-              <ul className="text-white font-medium font-['inter']">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Drink
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Dessert
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Sweet
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Frappuccino
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-md font-bold text-[rgb(71,51,38)] uppercase font-['poppins']">
-                Policy
-              </h2>
-              <ul className="text-white font-medium font-['inter']">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Licensing
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Franchise
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-md font-bold text-[rgb(71,51,38)] uppercase font-['poppins']">
-                Contact Us
-              </h2>
-              <ul className="text-white font-medium font-['inter']">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Facebook
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Telegram
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Instagram
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Twitter
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {footer.map(({ title, submenu }, index) => (
+              <div key={index}>
+                <h2 className="mb-6 text-md font-bold text-[rgb(71,51,38)] uppercase font-['poppins']">
+                  {title}
+                </h2>
+                <ul className="text-white font-medium font-['inter']">
+                  {submenu.map((s) => (
+                    <li key={s} className="mb-4">
+                      <Link to={s} className=" hover:underline">
+                        {s}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           <div className="w-full border-y-2 py-1 border-[rgb(71,51,38)] font-['poppins'] text-sm md:text-lg text-center font-bold text-[rgb(71,51,38)]">
             All Right <sup className="text-[13px]">©</sup> Reserved To ANGKIMSOR

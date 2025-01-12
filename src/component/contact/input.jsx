@@ -10,19 +10,19 @@ const input = ({ labelName, type }) => {
   };
   return (
     <div
-      className={`"w-full h-[45px] lg:w-[450px] relative flex items-center mb-5`}
+      className={`"w-full h-[45px] lg:w-[450px] relative flex items-center mt-8 mb-5`}
     >
       <label
         className={`${
-          label ? "translate-y-[-22px] text-black" : "text-white"
-        } absolute z-10 ml-2 md:text-md text-sm  font-['poppins'] align-top duration-500 transition-all font-semibold`}
+          label ? "translate-y-[-35px]" : ""
+        } absolute z-10 ml-2 md:text-md text-md text-black font-['poppins'] align-top duration-500 transition-all font-semibold`}
         onClick={() => input.current.focus()}
       >
         {labelName}
       </label>
       <input
         ref={input}
-        className="w-full h-[45px] outline-none pl-2 font-['poppins'] text-white bg-[#39393981]"
+        className="w-full h-[45px] outline-none rounded-none   pl-2 font-['poppins'] bg-[#92929298]"
         type={type}
         onFocus={() => setLabel(true)}
         onBlur={checkinputvalue}
@@ -30,8 +30,8 @@ const input = ({ labelName, type }) => {
       />
       <hr
         className={`${
-          label ? "w-full" : "w-0 border-none"
-        } transition-[width] duration-500 border-black absolute -bottom-0 border-2`}
+          label ? "w-full border-[rgb(71,51,38)]" : "w-0 border-[#b6b5b598]"
+        } transition-all duration-500 absolute bottom-0 border-2`}
       />
     </div>
   );
