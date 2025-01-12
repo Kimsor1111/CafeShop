@@ -4,3 +4,4 @@ export { default as Detail } from "./Detail";
 export { default as Category } from "./CategoryDetail";
 export { default as Errorpage } from "./Errorpage";
 export { default as About } from "./About";
+export { default as Contact } from "./Contact";

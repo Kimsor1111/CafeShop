@@ -1,10 +1,11 @@
 import React from "react";
+import img from "./../../assets/images/about.jpg";
 
 const About = () => {
   return (
     <>
       <div className="w-full h-fit md:px-[70px] px-[10px] py-10">
-        <div className="w-full h-full grid shadow-xl rounded-xl shadow-black/40 lg:grid-cols-2 grid-cols-1 gap-5">
+        <div className="w-full h-full grid shadow-xl bg-[#efddc9] py-5 rounded-xl shadow-black/40 lg:grid-cols-2 grid-cols-1 gap-5">
           <div className="pt-2 px-3">
             <h1 className="text-xl font-['poppins'] px-5 font-bold">
               How We Started
@@ -23,11 +24,7 @@ const About = () => {
             </h1>
           </div>
           <div className="px-5">
-            <img
-              src="https://sumatocoffee.com/cdn/shop/articles/the-importance-of-coffee-shops-in-communities-782577.jpg?v=1713277728&width=1600"
-              alt=""
-              className="rounded-[25px]"
-            />
+            <img src={img} alt="" className="rounded-[25px]" />
             <div className="w-full flex flex-row py-5 justify-center flex-wrap md:gap-[1%]">
               <div className="md:w-[48%] w-full h-[130px] mb-5 bg-gray-500/40 flex justify-center cursor-pointer rounded-xl flex-col pl-5">
                 <h1 className="text-3xl font-bold font-sans">6</h1>
