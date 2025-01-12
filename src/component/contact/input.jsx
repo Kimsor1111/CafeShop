@@ -26,8 +26,13 @@ const input = ({ labelName, type }) => {
         type={type}
         onFocus={() => setLabel(true)}
         onBlur={checkinputvalue}
+        required
       />
-      <hr className={`${label ? "w-full" : "w-0 border-none"} transition-[width] duration-500 border-black absolute -bottom-0 border-2`} />
+      <hr
+        className={`${
+          label ? "w-full" : "w-0 border-none"
+        } transition-[width] duration-500 border-black absolute -bottom-0 border-2`}
+      />
     </div>
   );
 };
