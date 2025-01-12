@@ -1,16 +1,44 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-const productSlider = ({ title, product, sliderindex }) => {
+import { useRef, useEffect } from "react";
+const productSlider = ({ title, product }) => {
+  const sliderRef = useRef(null);
+  const leftArrowRef = useRef(null);
+  const rightArrowRef = useRef(null);
+
+  const updateArrowsVisibility = () => {
+    const slider = sliderRef.current;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+    if (slider.scrollLeft > 0) leftArrowRef.current.classList.remove("hidden");
+    else leftArrowRef.current.classList.add("hidden");
+
+    if (slider.scrollLeft <= maxScroll)
+      rightArrowRef.current.classList.remove("hidden");
+    else rightArrowRef.current.classList.add("hidden");
+  };
+
   const scrollSliderLeft = () => {
-    var slider = document.querySelector(`.slider${sliderindex}`);
-    slider.scrollLeft = slider.scrollLeft - 300;
+    const slider = sliderRef.current;
+    slider.scrollLeft -= 300;
+    updateArrowsVisibility();
   };
+
   const scrollSliderRight = () => {
-    var slider = document.querySelector(`.slider${sliderindex}`);
-    slider.scrollLeft = slider.scrollLeft + 300;
+    const slider = sliderRef.current;
+    slider.scrollLeft += 300;
+    updateArrowsVisibility();
   };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    updateArrowsVisibility();
+    slider.addEventListener("scroll", updateArrowsVisibility);
+    return () => {
+      slider.removeEventListener("scroll", updateArrowsVisibility);
+    };
+  }, []);
   return (
     <div className="max-w-full w-[3150px] mt-10 relative">
       <div className="w-full h-[60px] flex flex-row gap-5 justify-between items-center">
@@ -24,19 +52,21 @@ const productSlider = ({ title, product, sliderindex }) => {
           </Link>
         </div>
       </div>
-      <div className="absolute z-[97] top-[50%] left-1 lg:block hidden cursor-pointer">
+      <div className="absolute z-[97] top-[50%] left-1 block cursor-pointer">
         <FontAwesomeIcon
+          ref={leftArrowRef}
           icon={faCaretLeft}
-          className="text-3xl opacity-50 hover:opacity-100"
+          className={`text-3xl text-black opacity-80 hover:opacity-100`}
           onClick={scrollSliderLeft}
         />
       </div>
       <div
-        className={`slider${sliderindex} relative w-full overflow-x-scroll scroll-smooth h-auto mt-5`}
+        ref={sliderRef}
+        className={`slider relative w-full overflow-x-scroll scroll-smooth h-auto mt-5`}
       >
         <div
           className={` flex flex-row gap-3 h-fit`}
-          style={{ width: `${315 * product.length}px` }}
+          style={{ width: `${310 * product.length}px` }}
         >
           {product.map(({ id, name, img }) => (
             <Link
@@ -58,10 +88,11 @@ const productSlider = ({ title, product, sliderindex }) => {
           ))}
         </div>
       </div>
-      <div className="absolute z-[97] top-[50%] right-1 lg:block hidden cursor-pointer">
+      <div className="absolute z-[97] top-[50%] right-1 block cursor-pointer">
         <FontAwesomeIcon
+          ref={rightArrowRef}
           icon={faCaretRight}
-          className="text-3xl opacity-50 hover:opacity-100"
+          className={`text-3xl text-black opacity-80 hover:opacity-100`}
           onClick={scrollSliderRight}
         />
       </div>

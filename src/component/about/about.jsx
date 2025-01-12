@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <div className="w-full h-fit md:px-[70px] px-[10px] py-10">
-        <div className="w-full h-full grid shadow-xl bg-[#efddc9] py-5 rounded-xl shadow-black/40 lg:grid-cols-2 grid-cols-1 gap-5">
+        <div className="w-full h-full grid py-5 lg:grid-cols-2 grid-cols-1 gap-5">
           <div className="pt-2 px-3">
             <h1 className="text-xl font-['poppins'] px-5 font-bold">
               How We Started

@@ -65,12 +65,7 @@ const Menu = () => {
           />
           <div className="mb-20">
             {Product.map(({ title, product }, index) => (
-              <ProductSlider
-                key={index}
-                sliderindex={index + 1}
-                title={title}
-                product={product}
-              />
+              <ProductSlider key={index}   title={title} product={product} />
             ))}
           </div>
         </div>
