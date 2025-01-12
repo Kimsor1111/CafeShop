@@ -1,10 +1,11 @@
 import RootLayout from "./layout/RootLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, MenuProduct, Detail, Category } from "./pages";
+import { Home, MenuProduct, Detail, Category, Errorpage, About } from "./pages";
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <Errorpage />,
     children: [
       {
         index: true,
@@ -17,16 +18,14 @@ const Router = createBrowserRouter([
       {
         path: "menu/detail/:nameurl",
         element: <Detail />,
-        errorElement: "Product Not Found",
       },
       {
         path: "menu/category/:category",
         element: <Category />,
-        errorElement: "Categorys Not Found",
       },
       {
         path: "about",
-        element: <h1>about</h1>,
+        element: <About />,
       },
       {
         path: "Contact",

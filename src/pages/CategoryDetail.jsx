@@ -56,7 +56,7 @@ const CategoryDetail = () => {
         <div className="lg:w-[78%] w-full pb-12 pt-5 lg:px-5 px-2 overflow-scroll">
           <div className="md:flex-row md:items-center w-full h-[70px] flex flex-row justify-between items-center">
             <h1 className="md:text-4xl w-[80%] text-xl font-bold font-['inter']">
-              Beverages & Foods
+              {menu} <span classname="font-['poppins']">{">"}</span> {title}
             </h1>
             <div
               className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
