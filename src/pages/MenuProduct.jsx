@@ -17,7 +17,7 @@ const Menu = () => {
       </h1>
       <div className="w-full h-screen flex flex-row justify-between relative">
         <div
-          className={`lg:w-[310px] xl:w-[22%] w-full lg:relative lg:translate-x-0 bg-[rgba(233,216,199,255)] absolute transition-all duration-500 pt-2 z-[97] ${
+          className={`lg:w-[310px] xl:w-[22%] w-full lg:relative lg:translate-x-0 bg-[rgba(233,216,199,255)] absolute transition-all duration-500 pt-2 z-[98] ${
             openmenu ? "" : "-translate-x-full"
           }`}
         >
@@ -65,7 +65,7 @@ const Menu = () => {
           />
           <div className="mb-20">
             {Product.map(({ title, product }, index) => (
-              <ProductSlider key={index}   title={title} product={product} />
+              <ProductSlider key={index} title={title} product={product} />
             ))}
           </div>
         </div>
