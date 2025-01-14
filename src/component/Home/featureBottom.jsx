@@ -2,14 +2,14 @@
 const featureBottom = ({title , des , img}) => {
   return (
     <div className="lg:h-[500px] md:grid-cols-2 md:h-[400px] relative w-full h-[600px] my-9 grid grid-cols-1">
-      <div className="lg:h-[500px] md:h-[400px] w-full h-[250px] flex justify-center items-center py-3">
+      <div data-aos="fade-right" className="lg:h-[500px] md:h-[400px] w-full h-[250px] flex justify-center items-center py-3">
         <img
           src={img}
           alt=""
           className="md:w-full w-[300px] h-full object-cover md:rounded-r-[60px] rounded-md"
         />
       </div>
-      <div className="md:relative md:top-0 md:justify-center justify-center md:items-start md:h-full w-full h-[340px] items-center absolute top-[260px] flex flex-col px-10">
+      <div data-aos="fade-left" className="md:relative md:top-0 md:justify-center justify-center md:items-start md:h-full w-full h-[340px] items-center absolute top-[260px] flex flex-col px-10">
         <h1 className="lg:text-5xl md:text-3xl text-2xl text-black font-bold font-['poppins']">
           {title}
         </h1>

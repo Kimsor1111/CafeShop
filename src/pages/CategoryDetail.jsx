@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link,  } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBackward,
@@ -55,10 +55,14 @@ const CategoryDetail = () => {
         </div>
         <div className="lg:w-[78%] w-full pb-12 pt-5 lg:px-5 px-2 overflow-scroll">
           <div className="md:flex-row md:items-center w-full h-[70px] flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl w-[80%] text-xl font-bold font-['inter']">
+            <h1
+              data-aos="fade-right"
+              className="md:text-4xl w-[80%] text-xl font-bold font-['inter']"
+            >
               {menu} <span classname="font-['poppins']">{">"}</span> {title}
             </h1>
             <div
+              data-aos="fade-left"
               className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}

@@ -37,10 +37,14 @@ const Menu = () => {
         </div>
         <div className="lg:w-[78%] lg:px-16 px-2 w-full overflow-scroll">
           <div className="md:flex-row md:items-center w-full h-[70px] flex flex-row justify-between items-center">
-            <h1 className="md:text-4xl w-[80%] text-xl font-bold font-['inter']">
+            <h1
+              data-aos="fade-right"
+              className="md:text-4xl w-[80%] text-xl font-bold font-['inter']"
+            >
               Beverages & Foods
             </h1>
             <div
+              data-aos="fade-left"
               className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
@@ -59,6 +63,7 @@ const Menu = () => {
             </div>
           </div>
           <FontAwesomeIcon
+          data-aos="fade-right"
             icon={faBook}
             className={`lg:hidden block mt-5 text-3xl cursor-pointer`}
             onClick={() => setOpenmenu(!openmenu)}

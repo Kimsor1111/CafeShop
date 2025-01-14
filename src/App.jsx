@@ -1,5 +1,8 @@
 import RootLayout from "./layout/RootLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import {
   Home,
   MenuProduct,
@@ -43,6 +46,12 @@ const Router = createBrowserRouter([
   },
 ]);
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 500, 
+      once: false, 
+    });
+  }, []);
   return (
     <>
       <RouterProvider router={Router}></RouterProvider>

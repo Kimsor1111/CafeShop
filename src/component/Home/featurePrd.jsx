@@ -1,6 +1,9 @@
 const featurePrd = ({ id, img, name, type, price, pricedot }) => {
   return (
-    <div className="lg:h-[530px] md:h-[450px] md:w-full w-[300px] h-[350px] bg-[rgba(253,240,224,255)] rounded-[25px]">
+    <div
+      data-aos="fade-down"
+      className="lg:h-[530px] md:h-[450px] md:w-full w-[300px] h-[350px] bg-[rgba(253,240,224,255)] rounded-[25px]"
+    >
       <div className="w-full h-[60%]">
         <img src={img} alt="" className="w-full h-full object-contain" />
       </div>

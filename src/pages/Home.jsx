@@ -37,7 +37,11 @@ const Home = () => {
           featureindex={index + 1}
         />
       ))}
-      <div className="xl:place-items-center xl:gap-0 lg:py-[5px] lg:h-[460px] lg:px-[25px] lg:gap-[25px] gap-2 lg:grid-cols-3 grid-cols-1 h-fit w-full grid mt-10">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        className="xl:place-items-center xl:gap-0 lg:py-[5px] lg:h-[460px] lg:px-[25px] lg:gap-[25px] gap-2 lg:grid-cols-3 grid-cols-1 h-fit w-full grid mt-10"
+      >
         {featureCard.map(({ icon, title, des }, index) => (
           <FeatureCard key={index} icon={icon} title={title} des={des} />
         ))}
@@ -57,25 +61,30 @@ const Home = () => {
           </Slider>
         </div>
       </div>
-      <h1 className="lg:text-5xl w-full h-[300px] bg-[rgba(233,216,199,255)] flex justify-center text-center items-center flex-col text-4xl font-['poppins'] font-bold text-[rgb(71,51,38)] px-10">
-        <span className="text-sm font-semibold mb-2">Cafe & Dessert</span>
-        Tasty & Inclusive Treats
-        <span className="text-sm font-semibold mt-2">
-          We offer a range of delicious vegan and gluten-free cakes, so everyone
-          can enjoy a sweet treat at our cafe.
-        </span>
-      </h1>
-      <div className="lg:gap-5 lg:px-5 lg:grid-cols-3 md:grid-cols-2 md:px-16 grid-cols-1 place-items-center pb-10 grid gap-5 px-5 bg-[rgba(233,216,199,255)]">
-        {featurePrd.map(({ id, img, name, type, price, pricedot }) => (
-          <FeaturePrd
-            key={id}
-            img={img}
-            name={name}
-            type={type}
-            price={price}
-            pricedot={pricedot}
-          />
-        ))}
+      <div className="bg-[rgba(233,216,199,255)]">
+        <h1
+          data-aos="fade-down"
+          className="lg:text-5xl w-full h-[300px] bg-[rgba(233,216,199,255)] flex justify-center text-center items-center flex-col text-4xl font-['poppins'] font-bold text-[rgb(71,51,38)] px-10"
+        >
+          <span className="text-sm font-semibold mb-2">Cafe & Dessert</span>
+          Tasty & Inclusive Treats
+          <span className="text-sm font-semibold mt-2">
+            We offer a range of delicious vegan and gluten-free cakes, so
+            everyone can enjoy a sweet treat at our cafe.
+          </span>
+        </h1>
+        <div className="lg:gap-5 lg:px-5 lg:grid-cols-3 md:grid-cols-2 md:px-16 grid-cols-1 place-items-center pb-10 grid gap-5 px-5 bg-[rgba(233,216,199,255)]">
+          {featurePrd.map(({ id, img, name, type, price, pricedot }) => (
+            <FeaturePrd
+              key={id}
+              img={img}
+              name={name}
+              type={type}
+              price={price}
+              pricedot={pricedot}
+            />
+          ))}
+        </div>
       </div>
       <FeatureBottom
         title={featureBottom.title}

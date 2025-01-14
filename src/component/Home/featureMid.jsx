@@ -10,7 +10,7 @@ const featureMid = ({ title, des, img, featureindex }) => {
   };
   return (
     <>
-      <div className="w-full h-[480px] mt-10 flex flex-row relative">
+      <div data-aos="fade-down" className="w-full h-[480px] mt-10 flex flex-row relative">
         {featureindex % 2 != 0 ? (
           <>
             <div className="lg:w-[38%] lg:relative lg:items- lg:bg-[rgb(71,51,38)] bg-black/50 absolute w-full left-0 h-full flex flex-col justify-center px-5">

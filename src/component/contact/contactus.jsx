@@ -1,4 +1,5 @@
 import Input from "./input";
+import img from './../../assets/images/contact.jpg'
 
 const contact = () => {
   const Label = [
@@ -13,7 +14,7 @@ const contact = () => {
     <>
       <div className="w-full h-fit px-2 md:px-[50px] py-10">
         <div className="w-full h-full grid grid-cols-1 md:grid-cols-2">
-          <form className="w-full h-full px-2 md:px-10 py-5">
+          <form data-aos="fade-right" className="w-full h-full px-2 md:px-10 py-5">
             <h1 className="text-4xl font-semibold font-['poppins'] mb-2">
               Contact Us
             </h1>
@@ -28,9 +29,9 @@ const contact = () => {
               Submit
             </button>
           </form>
-          <div>
+          <div data-aos="fade-left">
             <img
-              src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-illustration-download-in-svg-png-gif-file-formats--call-logo-laptop-helping-customer-service-pack-network-communication-illustrations-2912020.png?f=webp"
+              src={img}
               alt=""
               className="w-full h-full object-contain"
             />

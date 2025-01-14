@@ -6,7 +6,7 @@ const About = () => {
     <>
       <div className="w-full h-fit md:px-[70px] px-[10px] py-10">
         <div className="w-full h-full grid py-5 lg:grid-cols-2 grid-cols-1 gap-5">
-          <div className="pt-2 px-3">
+          <div data-aos="fade-right" className="pt-2 px-3">
             <h1 className="text-xl font-['poppins'] px-5 font-bold">
               How We Started
             </h1>
@@ -23,7 +23,7 @@ const About = () => {
               we're delighted to serve you.
             </h1>
           </div>
-          <div className="px-5">
+          <div data-aos="fade-left" className="px-5">
             <img src={img} alt="" className="rounded-[25px]" />
             <div className="w-full flex flex-row py-5 justify-center flex-wrap md:gap-[1%]">
               <div className="md:w-[48%] w-full h-[130px] mb-5 bg-gray-500/40 flex justify-center cursor-pointer rounded-xl flex-col pl-5">

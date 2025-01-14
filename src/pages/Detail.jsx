@@ -27,17 +27,23 @@ const Detail = () => {
       <h1 className="lg:pl-10 md:text-xl pl-2 w-full h-[40px] sticky text-md top-[70px] z-[100] bg-[rgba(233,216,199,255)] flex items-center font-['poppins'] font-semibold border-b border-black">
         {submenu} {">"} {name}
       </h1>
-      <Link to={"/menu"}>
+      <Link data-aos="fade-right" to={"/menu"}>
         <FontAwesomeIcon
           icon={faBackward}
           className="mt-2 lg:pl-10 pl-2 text-3xl"
         />
       </Link>
       <div className="md:grid-cols-2 grid-cols-1 w-full h-fit grid">
-        <div className="lg:h-[650px] md:h-[520px] w-full h-[400px]">
+        <div
+          data-aos="fade-right"
+          className="lg:h-[650px] md:h-[520px] w-full h-[400px]"
+        >
           <img src={img} alt="" className="w-full h-full object-contain" />
         </div>
-        <div className="lg:py-[100px] md:py-[10px] md:px-10 py-5 px-5 h-fit flex flex-col w-full gap-2">
+        <div
+          data-aos="fade-left"
+          className="lg:py-[100px] md:py-[10px] md:px-10 py-5 px-5 h-fit flex flex-col w-full gap-2"
+        >
           <h1 className="lg:text-xl text-lg font-['poppins'] font-bold">
             {submenu}
           </h1>
