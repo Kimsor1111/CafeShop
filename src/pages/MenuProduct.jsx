@@ -44,7 +44,6 @@ const Menu = () => {
               Beverages & Foods
             </h1>
             <div
-              data-aos="fade-left"
               className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
@@ -56,6 +55,7 @@ const Menu = () => {
                 placeholder="Search"
               />
               <FontAwesomeIcon
+              data-aos="fade-left"
                 icon={faMagnifyingGlass}
                 className="absolute right-5 text-xl cursor-pointer"
                 onClick={() => setOpensearch(!opensearch)}
@@ -63,7 +63,7 @@ const Menu = () => {
             </div>
           </div>
           <FontAwesomeIcon
-          data-aos="fade-right"
+            data-aos="fade-right"
             icon={faBook}
             className={`lg:hidden block mt-5 text-3xl cursor-pointer`}
             onClick={() => setOpenmenu(!openmenu)}
