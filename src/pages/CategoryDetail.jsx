@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link,  } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBackward,
@@ -62,18 +62,18 @@ const CategoryDetail = () => {
               {menu} <span classname="font-['poppins']">{">"}</span> {title}
             </h1>
             <div
-              data-aos="fade-left"
               className={`lg:z-0 md:w-[270px] w-[180px] px-2 h-full flex justify-end items-center relative ${
                 openmenu ? "-z-[1]" : ""
               }`}
             >
               <input
                 type="text"
-                className={`md:block ease-linear duration-[0.4s] h-1/2 rounded-[25px] outline-none border-none placeholder:font-['poppins']
-                ${opensearch ? "w-full pl-3" : "w-0"}`}
+                className={`md:block ease-linear pr-10 duration-[0.4s] h-1/2 rounded-[25px] outline-none border-none placeholder:font-['poppins']
+                  ${opensearch ? "w-full pl-3" : "w-0"}`}
                 placeholder="Search"
               />
               <FontAwesomeIcon
+                data-aos="fade-left"
                 icon={faMagnifyingGlass}
                 className="absolute right-5 text-xl cursor-pointer"
                 onClick={() => setOpensearch(!opensearch)}
@@ -81,6 +81,7 @@ const CategoryDetail = () => {
             </div>
           </div>
           <FontAwesomeIcon
+            data-aos="fade-right"
             icon={faBook}
             className={`lg:hidden block mt-5 text-3xl cursor-pointer mb-5`}
             onClick={() => setOpenmenu(!openmenu)}
