@@ -68,8 +68,8 @@ const CategoryDetail = () => {
             >
               <input
                 type="text"
-                className={`md:block ease-linear pr-10 duration-[0.4s] h-1/2 rounded-[25px] outline-none border-none placeholder:font-['poppins']
-                  ${opensearch ? "w-full pl-3" : "w-0"}`}
+                className={`md:block ease-linear duration-[0.4s] h-1/2 rounded-[25px] outline-none border-none placeholder:font-['poppins']
+                  ${opensearch ? "w-full pl-3 pr-10" : "w-0"}`}
                 placeholder="Search"
               />
               <FontAwesomeIcon
